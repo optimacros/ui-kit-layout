@@ -1,11 +1,9 @@
-import { Router } from './pages/Router'
+import React from 'react'
 
-import styles from './styles/Workspace.module.css'
-
-function App() {
+function App(): React.JSX.Element {
     return (
-        <div className={styles.Wrapper}>
-            <Router />
+        <div>
+            ui-layout
         </div>
     )
 }

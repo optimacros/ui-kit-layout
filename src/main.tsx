@@ -1,21 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 
-import './styles/colors.css'
-import './styles/variables.css'
-import './styles/media.css'
-import './styles/config.css'
+import './fonts/index.css'
+import App from './App'
 
-import './styles/Normalize.css'
-import './styles/DefaultColorTheme.css'
-import './styles/Application.css'
-import './styles/Fonts.css'
-
-
-import App from './App.tsx'
-
-ReactDOM.createRoot(document.getElementById('app')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const root = createRoot(document.getElementById('root')!)
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
 )
