@@ -1,17 +1,15 @@
-import React from 'react'
 import { isEmpty, map } from 'lodash'
-import { observer } from 'mobx-react'
 
-import type { Element } from './HeaderMenuElement'
-import { HeaderMenuElement } from './HeaderMenuElement'
-
+import React from 'react'
 import styles from './HeaderMenu.module.css'
+import { HeaderMenuElement } from "./HeaderMenuElement";
+import { MenuElement } from 'types/HeaderMenu';
+
 
 type Props = {
-    elements: Element[];
+    elements: MenuElement[];
 }
 
-@observer
 export class HeaderMenu extends React.Component<Props> {
     render(): JSX.Element | null {
         if (isEmpty(this.props.elements)) {

@@ -1,0 +1,29 @@
+.ToggleButtonWrapper {
+    display: flex;
+    width: 25px;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-right: 4px;
+
+    &__Open {
+        height: 100%;
+        border-left: 1px solid var(--dark-divider-color);
+
+    }
+
+    &__Close {
+        &:hover {
+            border: 1px solid #d1d1d1;
+        }
+    }
+}
+
+.ToggleButtonIcon {
+    font-size: 18px !important;
+    color: var(--contents-toggleBtn-color);
+
+    &:first-child {
+        margin-right: -14px;
+    }
+}

@@ -10,7 +10,7 @@
     position: relative;
 
     &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0;
@@ -42,7 +42,7 @@
         justify-content: center;
 
         font-size: 24px;
-        color: var(--nav-accent-color);
+        color: #fff;
 
         & img {
             max-width: 15px;

@@ -1,6 +1,6 @@
 .Container {
     max-height: 200px;
-    min-height: 28px;
+    height: 30px;
     position: relative;
     z-index: 1000;
     flex: 1;
@@ -53,8 +53,8 @@
     left: -1px;
     z-index: 10;
     margin: 0;
-    padding: 5px 0;
-    border: 1px solid var(--headerMenu-subMenu-border);
+    //padding: 5px 0;
+    border: 1px solid var(--primary-color);
     border-top: none;
     box-shadow: 6px 8px 8px 0 var(--headerMenu-subMenu-shadow);
     background: var(--headerMenu-subMenu-bg);
@@ -89,9 +89,8 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
     padding: 0;
     cursor: pointer;
     white-space: nowrap;
-    border: 1px solid transparent;
-    border-bottom-width: 2px;
-    font-size: 1.3rem;
+    border-left: 1px solid transparent;
+    //font-size: 1.3rem;
     margin: 0 2px;
 
     &__disabled {
@@ -99,7 +98,7 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
         cursor: auto;
 
         & > * {
-            opacity: .4;
+            opacity: 0.4;
         }
     }
 
@@ -123,7 +122,7 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
     }
 
     &:hover {
-        background: var(--headerMenu-subMenu-menuItem-hover);
+        background: var(--headerMenu-menuItem-hover);
     }
 
     &:hover > .SubMenu {
@@ -156,7 +155,16 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
 
     & .Element_Icon {
         font-size: 15px;
-        color: var(--primary-text-color);
+        color: var(--headerMenu-subMenu-color);
+
+        & > div > svg {
+            width: 15px;
+            height: 15px;
+
+            & > g > path {
+                stroke: var(--headerMenu-subMenu-color);
+            }
+        }
     }
 }
 
@@ -170,7 +178,7 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
 }
 
 .Element {
-    min-height: 23px;
+    height: 30px;
     padding: 0 8px;
     display: flex;
     align-items: center;
@@ -187,8 +195,8 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
         font-size: 22px;
 
         & img {
-            max-width: 15px;
-            max-height: 15px;
+            max-width: 18px;
+            max-height: 18px;
         }
     }
 
@@ -203,12 +211,11 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
         font-size: 15px;
         color: var(--primary-text-color);
     }
-
 }
 
 .SubMenu {
     & .Element {
-        color: var(--primary-text-color);
+        color: var(--headerMenu-subMenu-color);
         padding: 8px 4px 8px 32px;
 
         &_withIcon {

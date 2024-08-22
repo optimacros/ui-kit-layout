@@ -1,37 +1,24 @@
+import { observer } from 'mobx-react'
 import React from 'react'
 
 import styles from './HeaderUserMenu.module.css'
+import { MenuElement } from 'types/HeaderMenu'
+import { HeaderMenu } from '../HeaderMenu'
+import { HeaderNotification } from '../HeaderNotification'
 
-interface Props {
-    userName: string;
+interface HeaderUserMenuProps {
+    elements: MenuElement[];
 }
 
-export class HeaderUserMenu extends React.Component<React.PropsWithChildren<Props>> {
-    render() {
-        return (
-            <div className={styles.headerNav}>
-                <ul className={styles.headerNav_List}>
-                    <li className={styles.headerNav_Item}>
-                        {this.renderDropDown()}
-                    </li>
-                </ul>
-            </div>
-        )
-    }
+@observer
+export class HeaderUserMenu extends React.Component<HeaderUserMenuProps> {
+    render(): JSX.Element {
+        const { elements } = this.props
 
-    renderDropDown() {
         return (
-            <div className={styles.userMenu}>
-                <div className={styles.userMenu_Title}>{this.props.userName || ' '}</div>
-                <div className={styles.userMenu_List}>
-                    <ul>
-                        <li className={styles.userMenu_Name}>
-                            <span>{this.props.userName || ' '}</span>
-                        </li>
-
-                        {this.props.children}
-                    </ul>
-                </div>
+            <div className={styles.User}>
+                <HeaderNotification />
+                <HeaderMenu elements={elements} />
             </div>
         )
     }

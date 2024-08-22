@@ -1,9 +1,8 @@
-import React from 'react'
 import { isEmpty, map } from 'lodash'
-import { observer } from 'mobx-react'
+import React from 'react'
 
-import type { Element } from './HeaderMenuElement'
 import { HeaderMenuElement } from './HeaderMenuElement'
+import type { MenuElement } from 'types/HeaderMenu'
 
 import styles from './HeaderMenu.module.css'
 
@@ -13,11 +12,11 @@ const HEADER_MENU_OFFSET_FROM_WINDOW = 20
 type Props = {
     firstLevel?: boolean;
     rootElementNode: React.RefObject<HTMLLIElement>;
-    element: Element;
-    elements: Element[] | undefined;
+    element: MenuElement;
+    elements: MenuElement[] | undefined;
 }
 
-@observer
+
 export class HeaderSubMenu extends React.Component<Props> {
     constructor(props: Props) {
         super(props)

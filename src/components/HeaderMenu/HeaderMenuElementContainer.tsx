@@ -1,19 +1,18 @@
-import React from 'react'
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
-import { observer } from 'mobx-react'
+import React from 'react'
 
-import type { Element } from './HeaderMenuElement'
-import { Icon } from '../'
+import type { MenuElement } from 'types/HeaderMenu'
+
 
 import styles from './HeaderMenu.module.css'
+import { Icon } from 'ui-kit-lite'
 
 type Props = {
-    element: Element;
+    element: MenuElement;
     isFirstLevel?: boolean;
 }
 
-@observer
 export class HeaderMenuElementContainer extends React.Component<Props> {
     render(): JSX.Element {
         const { element } = this.props
@@ -41,7 +40,7 @@ export class HeaderMenuElementContainer extends React.Component<Props> {
         )
     }
 
-    renderIcon(element: Element): JSX.Element | null {
+    renderIcon(element: MenuElement): JSX.Element | null {
         if (!element.icon) {
             return null
         }

@@ -1,28 +1,15 @@
-import React from 'react'
-import { isEmpty } from 'lodash'
 import classNames from 'classnames'
-import { observer } from 'mobx-react'
+import { isEmpty } from 'lodash'
+import React from 'react'
 
 import { HeaderMenuElementContainer } from './HeaderMenuElementContainer'
 import { HeaderSubMenu } from './HeaderSubMenu'
+import type { MenuElement } from 'types/HeaderMenu'
 
 import styles from './HeaderMenu.module.css'
 
-export type Element = {
-    id: string;
-    title: string;
-    open?: () => void;
-    icon?: string;
-    hidden?: boolean;
-    disabled?: boolean;
-    isChild?: boolean;
-    isParent?: boolean;
-    children?: Element[];
-    type?: string;
-}
-
 type Props = {
-    element: Element;
+    element: MenuElement;
     firstLevel?: boolean;
 }
 
@@ -30,7 +17,6 @@ type State = {
     showMenu: boolean;
 }
 
-@observer
 export class HeaderMenuElement extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props)
