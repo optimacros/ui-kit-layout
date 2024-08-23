@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { mergeStyles, isValuePresent } from '../../utils'
 
 import themeStyles from './theme.module.css'
-import { FontIcon } from 'ui-kit-lite';
+import { FontIcon } from 'ui-kit-core';
 
 interface Props {
     placeHolder?: string;

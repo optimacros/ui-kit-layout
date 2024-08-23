@@ -2,7 +2,7 @@ import React from 'react'
 
 
 import styles from './HeaderNavigation.module.css'
-import { Icon } from 'ui-kit-lite';
+import { Icon } from 'ui-kit-core';
 
 type Props = {
     title: string;

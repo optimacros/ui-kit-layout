@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { HeaderNotificationBadge } from './HeaderNotificationBadge'
 
 import styles from './HeaderNotification.module.css'
-import { Icon } from 'ui-kit-lite'
+import { Icon } from 'ui-kit-core'
 
 export function HeaderNotification(): JSX.Element | null {
     const notification = {

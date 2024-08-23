@@ -6,7 +6,7 @@ import type { MenuElement } from 'types/HeaderMenu'
 
 
 import styles from './HeaderMenu.module.css'
-import { Icon } from 'ui-kit-lite'
+import { Icon } from 'ui-kit-core'
 
 type Props = {
     element: MenuElement;
