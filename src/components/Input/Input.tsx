@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
 import classnames from 'classnames'
-import { FontIcon } from '../FontIcon'
 import { mergeStyles, isValuePresent } from '../../utils'
 
 import themeStyles from './theme.module.css'
+import { FontIcon } from 'ui-kit-lite';
 
 interface Props {
     placeHolder?: string;

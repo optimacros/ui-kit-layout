@@ -88,7 +88,7 @@ const userElements = [
 
 function App() {
     return (
-        <div className={styles.Wrapper}>
+        <div>
             <Header elementsMenu={elements} elementsUserMenu={userElements} />
         </div>
     )

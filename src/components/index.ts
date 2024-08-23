@@ -1,8 +1,4 @@
-export { Favorite } from './Favorite'
-export { FontIcon } from './FontIcon'
-export { Icon } from './Icon'
 export { default as Input } from './Input'
-export { Tooltip } from './Tooltip'
 
 export { HeaderContainer } from './HeaderContainer'
 
