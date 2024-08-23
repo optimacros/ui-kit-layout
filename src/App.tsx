@@ -51,13 +51,13 @@ const elements = [
 const userElements = [
             {
                 id: '10',
-                title: 'userName',
-                icon: 'iconUser',
+                title: 'User Name',
+                icon: 'account_circle',
                 disabled: false,
                 children: [
                     {
                         id: '11',
-                        icon: 'iconUser',
+                        icon: 'account_circle',
                         title: 'Profile',
                         disabled: false,
                         open: () => console.log("click"),

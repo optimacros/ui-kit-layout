@@ -31,7 +31,7 @@ export function HeaderNotification(): JSX.Element | null {
         >
             <HeaderNotificationBadge notificationUnreadCount={notification.unreadCount} />
             <Icon
-                value="iconBell"
+                value="notifications"
                 className={styles.NotificationIcon}
             />
         </div>
