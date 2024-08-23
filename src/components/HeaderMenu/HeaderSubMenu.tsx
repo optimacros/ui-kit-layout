@@ -16,7 +16,6 @@ type Props = {
     elements: MenuElement[] | undefined;
 }
 
-
 export class HeaderSubMenu extends React.Component<Props> {
     constructor(props: Props) {
         super(props)

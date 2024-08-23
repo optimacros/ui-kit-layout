@@ -3,10 +3,9 @@ import { isEmpty } from 'lodash'
 import React from 'react'
 
 import type { MenuElement } from 'types/HeaderMenu'
-
+import { Icon } from 'ui-kit-core'
 
 import styles from './HeaderMenu.module.css'
-import { Icon } from 'ui-kit-core'
 
 type Props = {
     element: MenuElement;

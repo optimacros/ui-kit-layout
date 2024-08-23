@@ -145,6 +145,12 @@
     /* header */
     --header-bg: #44b991;
     --header-color: #ffffff;
+    --headerMenu-subMenu-bg: #ffffff;
+    --headerMenu-menuItem-hover: rgba(0, 0, 0, 0.1);
+    --headerMenu-subMenu-shadow: rgba(24, 26, 31, 0.2);
+    --headerMenu-subMenu-border: #44b991;
+    --headerMenu-subMenu-menuItem-hover: #E5E5E5;
+    --headerMenu-subMenu-color: #545454;
 
     /* tabs */
     --tab-header-dropdown-bg: #e8e8e8;

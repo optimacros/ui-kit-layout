@@ -15,16 +15,21 @@ type Props = {
 export class ToggleIcon extends React.Component<Props> {
     render(): JSX.Element {
         const { isOpen, handleClick, wrapperClassName, iconClassName } = this.props;
-        const iconValue = isOpen ? 'keyboard_arrow_right' : 'keyboard_arrow_left';
-        const title = isOpen ? 'Hide panel' : 'Show panel';
+        const iconValue = isOpen
+            ? 'keyboard_arrow_right'
+            : 'keyboard_arrow_left'
+
+        const title = isOpen
+            ? 'Hide panel'
+            : 'Show panel'
 
         const className = classNames(
+            wrapperClassName,
             styles.ToggleButtonWrapper,
             {
                 [styles.ToggleButtonWrapper__Close]: isOpen,
                 [styles.ToggleButtonWrapper__Open]: !isOpen,
             },
-            wrapperClassName,
         );
 
         const iconClassNameFinal = classNames(styles.ToggleButtonIcon, iconClassName);
@@ -40,7 +45,6 @@ export class ToggleIcon extends React.Component<Props> {
                     className={iconClassNameFinal}
                     value={iconValue}
                 />
-
                 <Icon
                     className={iconClassNameFinal}
                     value={iconValue}

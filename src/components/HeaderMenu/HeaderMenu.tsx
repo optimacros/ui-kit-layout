@@ -1,13 +1,15 @@
+import classNames from 'classnames'
 import { isEmpty, map } from 'lodash'
-
 import React from 'react'
-import styles from './HeaderMenu.module.css'
-import { HeaderMenuElement } from "./HeaderMenuElement";
-import { MenuElement } from 'types/HeaderMenu';
 
+import { HeaderMenuElement } from './HeaderMenuElement'
+import type { MenuElement } from 'types/HeaderMenu'
+
+import styles from './HeaderMenu.module.css'
 
 type Props = {
     elements: MenuElement[];
+    className?: string;
 }
 
 export class HeaderMenu extends React.Component<Props> {
@@ -16,8 +18,13 @@ export class HeaderMenu extends React.Component<Props> {
             return null
         }
 
+        const className = classNames(
+            styles.Container,
+            this.props.className,
+        )
+
         return (
-            <div className={styles.Container}>
+            <div className={className}>
                 <ul className={styles.Menu}>
                     {this.renderList()}
                 </ul>

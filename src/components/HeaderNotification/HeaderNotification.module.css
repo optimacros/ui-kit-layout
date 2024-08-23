@@ -9,7 +9,6 @@
     fill: var(--color-white);
 }
 
-
 .NotificationIcon {
     > div {
         display: flex;
@@ -19,7 +18,7 @@
     svg {
         height: 18px;
         width: 18px;
-        
+
         path:nth-child(1) {
             fill: transparent;
         }
