@@ -1,4 +1,12 @@
+import { Sidebar } from 'layouts/Sidebar/Sidebar'
 import { Header } from './layouts/Header/Header'
+
+import iconApp from 'icons/icon-app.svg'
+import iconFolderClose from 'icons/icon-folder-close.svg'
+import iconWorkspace from 'icons/icon-workspace.svg'
+
+import style from './App.module.css'
+import { ListItem } from 'types/SidebarItem'
 
 const elements = [
     {
@@ -93,14 +101,134 @@ const notification = {
     toggle: () => console.log('toggle')
 }
 
+// Sidebar mock
+
+
+const foldersMock: ListItem[] = [
+    {
+        folderId: null,
+        type: 'folder',
+        name: 'Folder 1',
+        id: 1,
+        icon: iconFolderClose,
+    },
+    {
+        folderId: null,
+        type: 'folder',
+        name: 'Folder 2',
+        id: 2,
+        icon: iconFolderClose,
+
+    },
+    {
+        folderId: 1,
+        type: 'folder',
+        name: 'Folder 3',
+        id: 3,
+        icon: iconFolderClose,
+
+    },
+    {
+        folderId: null,
+        type: 'folder',
+        name: 'Folder 4',
+        id: 4,
+        icon: iconFolderClose,
+
+    },
+]
+
+const workspacesMock: ListItem[] = [
+    {
+        folderId: 1,
+        type: 'workspace',
+        name: 'Workspace 1',
+        id: 1,
+        href: '#',
+        icon: iconWorkspace,
+    },
+    {
+        folderId: 2,
+        type: 'workspace',
+        name: 'Workspace 2',
+        id: 2,
+        href: '#',
+        icon: iconWorkspace,
+    },
+    {
+        folderId: null,
+        type: 'workspace',
+        name: 'Workspace 3',
+        id: 3,
+        href: '#',
+        icon: iconWorkspace,
+    },
+    {
+        folderId: 3,
+        type: 'workspace',
+        name: 'Workspace 4',
+        id: 4,
+        href: '#',
+        icon: iconWorkspace,
+    },
+]
+const appManagersMock: ListItem[] = [
+    {
+        folderId: 1,
+        type: 'appManager',
+        name: 'AM 1',
+        id: 1,
+        href: '#',
+        icon: iconApp,
+    },
+    {
+        folderId: 2,
+        type: 'appManager',
+        name: 'AM 2',
+        id: 3,
+        href: '#',
+        icon: iconApp,
+    },
+    {
+        folderId: 3,
+        type: 'appManager',
+        name: 'AM 3',
+        id: 3,
+        href: '#',
+        icon: iconApp,
+    },
+    {
+        folderId: null,
+        type: 'appManager',
+        name: 'AM 4',
+        id: 4,
+        href: '#',
+        icon: iconApp,
+    },
+]
+
+
 function App() {
     return (
-        <div>
-            <Header
-                elementsMenu={elements}
-                elementsUserMenu={userElements}
-                notification={notification}
-            />
+        <div className={style.App}>
+            <div className={style.HeaderWrapper}>
+                <Header
+                    elementsMenu={elements}
+                    elementsUserMenu={userElements}
+                    notification={notification}
+                />
+            </div>
+            <div className={style.MainWrapper}>
+                <div className={style.ContentWrapper}>
+                    <h1>MAIN CONTENT</h1>
+                </div>
+                <div className={style.SidebarWrapper}>
+                    <Sidebar
+                        folders={foldersMock}
+                        content={[workspacesMock, appManagersMock]}
+                    />
+                </div>
+            </div>
         </div>
     )
 }

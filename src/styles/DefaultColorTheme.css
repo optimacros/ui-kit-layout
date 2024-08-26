@@ -83,7 +83,7 @@
     --Button-primary-color: #2da274;
     --Button-primary-bg-hover: rgba(45, 162, 116, 0.1);
     --Button-neutral-color: #595959;
-    --Button-neutral-bg-hover: rgba(33,33,33,.2);
+    --Button-neutral-bg-hover: rgba(33, 33, 33, 0.2);
     --Button-disabled-bg: #f0f0f0;
     --Button-disabled-color: #c9c9c9;
     --Button-disabled-bg-hover: #f0f0f0;
@@ -125,7 +125,7 @@
     --model-offline-date-color: #212121;
 
     --model-status-color: #212121;
-    --model-offline-background: rgba(0,0,0,.2);
+    --model-offline-background: rgba(0, 0, 0, 0.2);
 
     --model-delete-bg: #727272;
 
@@ -149,8 +149,12 @@
     --headerMenu-menuItem-hover: rgba(0, 0, 0, 0.1);
     --headerMenu-subMenu-shadow: rgba(24, 26, 31, 0.2);
     --headerMenu-subMenu-border: #44b991;
-    --headerMenu-subMenu-menuItem-hover: #E5E5E5;
+    --headerMenu-subMenu-menuItem-hover: #e5e5e5;
     --headerMenu-subMenu-color: #545454;
+
+    /* List */
+    --ListItem-white-color: #ffffff;
+    --ListItem-icon-color: #ffffff;
 
     /* tabs */
     --tab-header-dropdown-bg: #e8e8e8;
@@ -216,17 +220,17 @@
     --GridBody-TopLeft-bg: #f1f1f1;
     --GridBody-heading0-bg: #d7d7d7;
     --PreviewCell-Cell-bg: #fff;
-    --PreviewCell-CellLink-color: #0000FF;
+    --PreviewCell-CellLink-color: #0000ff;
     --default-background-cell-color: #ffffff;
     --calculated-text-color: #212121;
-    --input-text-color: #0000FF;
+    --input-text-color: #0000ff;
     --CellEditor-Textarea-bg: #ffffff;
-    --CellEditor-PreEditContainer-bg: #0000FF;
+    --CellEditor-PreEditContainer-bg: #0000ff;
 
     /* Modal */
     --Modal-bg: #ffffff;
     --Modal-title-color: #1c1c1c;
-    --Modal-overlay-bg: rgba(50, 50, 50, .2);
+    --Modal-overlay-bg: rgba(50, 50, 50, 0.2);
 
     /* User Menu */
     --UserMenu-bg: #ffffff;
@@ -290,12 +294,12 @@
     --trace-dialog-highligh-border: #b5b5b5;
 
     /* Charts */
-    --chart-incrementColor: #228B22;
-    --chart-decrementColor: #B22222;
-    --chart-totalColor: #0000CD;
+    --chart-incrementColor: #228b22;
+    --chart-decrementColor: #b22222;
+    --chart-totalColor: #0000cd;
 
     /* Icons */
-    --primary-iconColor: #A5A5A5;
+    --primary-iconColor: #a5a5a5;
     --secondary-iconColor-0: #626262;
     --secondary-iconColor-1: #50be98;
 

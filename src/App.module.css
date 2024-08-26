@@ -1,0 +1,16 @@
+.App {
+    height: 100%;
+}
+
+.MainWrapper {
+    display: flex;
+    min-height: 100%;
+
+    .ContentWrapper {
+        width: 100%;
+    }
+
+    .SidebarWrapper {
+        width: 300px;
+    }
+}

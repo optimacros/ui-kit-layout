@@ -1,0 +1,17 @@
+﻿.SubList {
+    display: flex;
+    flex-direction: column;
+    
+    &.Expanded {
+        > .Content {
+            height: 100%;
+        }
+    }
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+}
