@@ -1,16 +1,37 @@
 .App {
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
 .MainWrapper {
     display: flex;
-    min-height: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    overflow: hidden;
 
     .ContentWrapper {
-        width: 100%;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .Main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        overflow: hidden;
     }
 
     .SidebarWrapper {
         min-width: 300px;
     }
+}
+
+.FooterWrapper {
+    width: 100%;
 }

@@ -7,6 +7,7 @@ import iconWorkspace from 'icons/icon-workspace.svg'
 
 import style from './App.module.css'
 import { ListItem } from 'types/SidebarItem'
+import { Footer } from 'layouts/Footer/Footer'
 
 const elements = [
     {
@@ -221,7 +222,10 @@ function App() {
             </div>
             <div className={style.MainWrapper}>
                 <div className={style.ContentWrapper}>
-                    <h1>MAIN CONTENT</h1>
+                    <main className={style.Main}>
+                        <h1>MAIN CONTENT</h1>
+                    </main>
+                    <Footer appVersion='1.0.0' />
                 </div>
                 <div className={style.SidebarWrapper}>
                     <Sidebar
