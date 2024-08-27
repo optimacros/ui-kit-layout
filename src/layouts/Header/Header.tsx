@@ -1,11 +1,10 @@
+import { HeaderMenu, HeaderUserMenu } from 'components'
+import { ToggleIcon } from 'components/ToggleIcon/ToggleIcon'
 import React from 'react'
-import type {MenuElement} from 'types/HeaderMenu'
+import type { MenuElement } from 'types/HeaderMenu'
+import { Notification } from 'types/Notification'
 
 import styles from './Header.module.css'
-import { ToggleIcon } from 'components/ToggleIcon/ToggleIcon';
-import { HeaderMenu, HeaderUserMenu } from 'components';
-import { Notification } from 'types/Notification';
-
 
 interface HeaderProps {
     elementsMenu: MenuElement[];
@@ -14,10 +13,10 @@ interface HeaderProps {
     showToggleIcon?: boolean;
 }
 
-
 export class Header extends React.Component<HeaderProps> {
     render(): JSX.Element {
-        const {elementsMenu, elementsUserMenu, notification, showToggleIcon = true} = this.props;
+        const { elementsMenu, elementsUserMenu, notification, showToggleIcon = true } = this.props
+
         return (
             <header className={styles.Header}>
                 <HeaderMenu
@@ -31,13 +30,12 @@ export class Header extends React.Component<HeaderProps> {
                 />
 
                 {showToggleIcon && (
-                    <ToggleIcon
-                        wrapperClassName={styles.ToggleIconWrapper}
-                        iconClassName={styles.ToggleIcon}
-                    />
+                <ToggleIcon
+                    wrapperClassName={styles.ToggleIconWrapper}
+                    iconClassName={styles.ToggleIcon}
+                />
                 )}
             </header>
         )
     }
-
 }

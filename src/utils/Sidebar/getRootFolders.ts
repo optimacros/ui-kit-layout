@@ -1,9 +1,9 @@
-﻿import type { ListItem } from 'widgets/List/List'
+import type { ListItem } from 'widgets/List/List'
 
 export function getRootFolders(
     folders: ListItem[],
     sidebarContent: ListItem[][],
-    insideExpand = false
+    insideExpand = false,
 ): ListItem[] {
     const rootFolders: ListItem[] = []
 

@@ -1,10 +1,9 @@
-import React from 'react'
-
 import { List } from 'components/List/List'
+import React from 'react'
+import { ListItem } from 'types/SidebarItem'
 import { getSidebarData } from 'utils/Sidebar/getSidebarData'
 
 import styles from './Sidebar.module.css'
-import { ListItem } from 'types/SidebarItem';
 
 interface Props {
     folders: ListItem[];

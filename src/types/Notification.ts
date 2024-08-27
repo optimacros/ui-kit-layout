@@ -1,6 +1,6 @@
 export interface Notification {
-    unreadCount: number,
-    active: boolean,
-    visible: boolean,
-    toggle: () => void
+    unreadCount: number;
+    active: boolean;
+    visible: boolean;
+    toggle: () => void;
 }

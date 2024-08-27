@@ -28,7 +28,7 @@ export const headerMenuElements = [
                 open: () => {
                     console.log('onClick Header Menu')
                 },
-            }
+            },
         ],
     },
     {
@@ -44,5 +44,5 @@ export const headerMenuElements = [
         open: () => {
             console.log('onClick Header Menu')
         },
-    }
+    },
 ]

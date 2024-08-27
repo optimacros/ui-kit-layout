@@ -1,13 +1,14 @@
-import { Sidebar } from 'layouts/Sidebar/Sidebar'
-import { Header } from './layouts/Header/Header'
 
 import iconApp from 'icons/icon-app.svg'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconWorkspace from 'icons/icon-workspace.svg'
+import { Footer } from 'layouts/Footer/Footer'
+import { Sidebar } from 'layouts/Sidebar/Sidebar'
+import { ListItem } from 'types/SidebarItem'
+
+import { Header } from './layouts/Header/Header'
 
 import style from './App.module.css'
-import { ListItem } from 'types/SidebarItem'
-import { Footer } from 'layouts/Footer/Footer'
 
 const elements = [
     {
@@ -15,25 +16,25 @@ const elements = [
         icon: 'list',
         title: 'AM Landing (Applications)',
         disabled: false,
-        open: () => console.log("click"),
+        open: () => console.log('click'),
     },
     {
         id: '2',
         title: 'Tasks manager',
         disabled: false,
-        open: () => console.log("click"),
+        open: () => console.log('click'),
     },
     {
         id: '3',
         title: 'Task output',
         disabled: false,
-        open: () => console.log("click"),
+        open: () => console.log('click'),
     },
     {
         id: '4',
         title: 'General parameters',
         disabled: false,
-        open: () => console.log("click"),
+        open: () => console.log('click'),
     },
     {
         id: '5',
@@ -42,20 +43,20 @@ const elements = [
     },
     {
         id: '6',
-        title: `Help`,
+        title: 'Help',
         disabled: false,
         children: [
             {
                 id: '7',
                 icon: 'help_outline',
-                title: `App Version`,
+                title: 'App Version',
                 disabled: false,
-                open: () => console.log("click"),
+                open: () => console.log('click'),
             },
         ],
     },
 ]
-        
+
 const userElements = [
     {
         id: '10',
@@ -68,42 +69,41 @@ const userElements = [
                 icon: 'account_circle',
                 title: 'Profile',
                 disabled: false,
-                open: () => console.log("click"),
+                open: () => console.log('click'),
             },
             {
                 id: '12',
                 icon: 'help_outline',
                 title: 'App version',
                 disabled: false,
-                open: () => console.log("click"),
+                open: () => console.log('click'),
             },
             {
                 id: '13',
                 icon: 'settings',
                 title: 'Settings',
                 disabled: false,
-                open: () => console.log("click"),
+                open: () => console.log('click'),
             },
             {
                 id: '14',
                 icon: 'input',
                 title: 'Log Out',
                 disabled: false,
-                open: () => console.log("click"),
+                open: () => console.log('click'),
             },
-        ]
+        ],
     },
 ]
 
 const notification = {
     unreadCount: 0,
     active: false,
-    visible: true,  
-    toggle: () => console.log('toggle')
+    visible: true,
+    toggle: () => console.log('toggle'),
 }
 
 // Sidebar mock
-
 
 const foldersMock: ListItem[] = [
     {
@@ -163,7 +163,7 @@ const workspacesMock: ListItem[] = [
         id: 3,
         href: '#',
         icon: iconWorkspace,
-        adminUrl: '123/213'
+        adminUrl: '123/213',
     },
     {
         folderId: 3,
@@ -209,7 +209,6 @@ const appManagersMock: ListItem[] = [
     },
 ]
 
-
 function App() {
     return (
         <div className={style.App}>
@@ -225,7 +224,7 @@ function App() {
                     <main className={style.Main}>
                         <h1>MAIN CONTENT</h1>
                     </main>
-                    <Footer appVersion='1.0.0' />
+                    <Footer appVersion="1.0.0" />
                 </div>
                 <div className={style.SidebarWrapper}>
                     <Sidebar

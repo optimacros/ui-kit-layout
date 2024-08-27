@@ -1,10 +1,11 @@
 import { action, computed, makeObservable, observable } from 'mobx'
+
 import { breadCrumbsFolders } from './mockData/breadCrumbsFolders'
-import { menuTags } from './mockData/menuTags'
 import { foldersList } from './mockData/foldersList'
+import { headerMenuElements } from './mockData/headerMenuElements'
+import { menuTags } from './mockData/menuTags'
 import { modelsList } from './mockData/modelsList'
 import { workspaceListSortByName } from './mockData/workspaceListSortByName'
-import { headerMenuElements } from './mockData/headerMenuElements'
 
 export enum TabTypes {
     OLAP = 'olap',
@@ -18,7 +19,7 @@ class DriveLandingState {
 
     // mock actions
 
-    @observable isCardView: boolean = true
+    @observable isCardView = true
 
     @action toggleCardView() {
         this.isCardView = !this.isCardView
@@ -48,14 +49,14 @@ class DriveLandingState {
             label: 'element menu 1',
             onClick: () => {
                 console.log('click')
-            }
+            },
         },
         {
             visible: true,
             label: 'element menu 2',
             onClick: () => {
                 console.log('click')
-            }
+            },
         },
         {
             visible: true,
@@ -63,7 +64,7 @@ class DriveLandingState {
             href: 'link',
             onClick: () => {
                 console.log('click')
-            }
+            },
         },
     ]
 
