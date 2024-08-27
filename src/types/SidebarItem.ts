@@ -7,4 +7,5 @@ export interface ListItem {
     active?: boolean;
     expand?: ListItem[];
     icon?: string;
+    adminUrl?: string;
 }

@@ -37,6 +37,7 @@ export function List(props: ListProps): JSX.Element {
                 icon={listItem.icon}
                 text={listItem.name}
                 active={listItem.active}
+                adminUrl={listItem.adminUrl}
             />
         )
     }

@@ -162,6 +162,7 @@ const workspacesMock: ListItem[] = [
         id: 3,
         href: '#',
         icon: iconWorkspace,
+        adminUrl: '123/213'
     },
     {
         folderId: 3,

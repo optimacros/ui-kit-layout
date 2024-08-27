@@ -1,4 +1,9 @@
-﻿.ListItem {
+﻿.Container {
+    display: flex;
+    align-items: center;
+}
+
+.ListItem {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -6,14 +11,22 @@
     cursor: pointer;
     transition: all 300ms;
     position: relative;
-    
+    width: 100%;
 
     &:hover {
-        background: hsla(0, 0%, 100%, .1);
-        
+        background: hsla(0, 0%, 100%, 0.1);
+
         &:not(.Selected) .RightIcon {
-            opacity: 0.5
+            opacity: 0.5;
         }
+    }
+}
+
+.Setting {
+    padding: 12px 28px;
+
+    &:hover {
+        background: hsla(0, 0%, 100%, 0.1);
     }
 }
 
@@ -36,8 +49,7 @@
     height: 18px;
     transition: all 300ms;
     color: var(--ListItem-icon-color);
-    
-    
+
     > div > div {
         width: 18px;
         height: 18px;
@@ -45,7 +57,7 @@
         align-items: center;
         justify-content: center;
     }
-    
+
     & svg {
         max-width: 18px;
         max-height: 18px;
@@ -66,14 +78,14 @@
     .RightIcon {
         opacity: 1;
     }
-    
+
     &:before {
-        content: '';
+        content: "";
         height: 100%;
-        width:4px;
+        width: 4px;
         position: absolute;
         top: 0;
         left: 0;
-        background-color:var(--ListItem-icon-color); 
+        background-color: var(--ListItem-icon-color);
     }
 }
