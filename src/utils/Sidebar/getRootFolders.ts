@@ -1,4 +1,4 @@
-import type { ListItem } from 'widgets/List/List'
+import { ListItem } from 'types/SidebarItem'
 
 export function getRootFolders(
     folders: ListItem[],

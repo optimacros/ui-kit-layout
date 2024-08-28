@@ -1,5 +1,5 @@
 import { getRootFolders } from './getRootFolders'
-import type { ListItem } from 'components/List/List'
+import { ListItem } from 'types/SidebarItem'
 
 export function getSidebarData(
     folders: ListItem[],
