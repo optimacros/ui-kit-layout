@@ -1,10 +1,12 @@
-﻿import { ListItem as ListItemComponent } from './ListItem'
+import { JSX } from 'react'
+
+import { ListItem as ListItemComponent } from './ListItem'
 import { SubList } from './SubList'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconFolderOpen from 'icons/icon-folder-open.svg'
+import { ListItem } from 'types/SidebarItem'
 
 import styles from './List.module.css'
-import { ListItem } from 'types/SidebarItem'
 
 interface ListProps {
     listData: ListItem[];

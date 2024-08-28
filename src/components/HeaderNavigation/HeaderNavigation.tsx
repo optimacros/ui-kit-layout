@@ -1,5 +1,4 @@
-import React from 'react'
-
+import { Component, JSX } from 'react'
 import { Icon } from 'ui-kit-core'
 
 import styles from './HeaderNavigation.module.css'
@@ -9,7 +8,7 @@ type Props = {
     onClick: () => void;
 }
 
-export class HeaderNavigation extends React.Component<Props> {
+export class HeaderNavigation extends Component<Props> {
     render(): JSX.Element {
         return (
             <div

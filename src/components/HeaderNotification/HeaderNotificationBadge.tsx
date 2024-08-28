@@ -1,4 +1,6 @@
-﻿import styles from './HeaderNotificationBadge.module.css'
+import { JSX } from 'react'
+
+import styles from './HeaderNotificationBadge.module.css'
 
 interface HeaderNotificationBadgeProps {
     notificationUnreadCount: number;

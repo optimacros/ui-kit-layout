@@ -1,7 +1,8 @@
-import React, { forwardRef } from 'react'
 import classNames from 'classnames'
-import { mergeStyles } from '../../utils'
+import React, { forwardRef } from 'react'
+
 import { Input as BaseInput } from './Input'
+import { mergeStyles } from '../../utils'
 
 import styles from './Input.module.css'
 
@@ -28,7 +29,9 @@ interface Props {
 const Input = (props: Props, ref) => {
     const { hint, placeholder, label, title, collapsed, theme: customTheme, ...otherProps } = props
     const theme: Record<string, string> = mergeStyles(customTheme, styles)
-    const newLabel = !collapsed ? label || title : ''
+    const newLabel = !collapsed
+        ? label || title
+        : ''
     const className = classNames(
         {
             [theme.collapsed]: collapsed,

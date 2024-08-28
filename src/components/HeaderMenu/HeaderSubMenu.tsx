@@ -1,5 +1,5 @@
 import { isEmpty, map } from 'lodash'
-import React from 'react'
+import { Component, createRef, RefObject, JSX } from 'react'
 
 import { HeaderMenuElement } from './HeaderMenuElement'
 import type { MenuElement } from 'types/HeaderMenu'
@@ -11,19 +11,19 @@ const HEADER_MENU_OFFSET_FROM_WINDOW = 20
 
 type Props = {
     firstLevel?: boolean;
-    rootElementNode: React.RefObject<HTMLLIElement>;
+    rootElementNode: RefObject<HTMLLIElement>;
     element: MenuElement;
     elements: MenuElement[] | undefined;
 }
 
-export class HeaderSubMenu extends React.Component<Props> {
+export class HeaderSubMenu extends Component<Props> {
     constructor(props: Props) {
         super(props)
 
-        this.rootMenuNode = React.createRef()
+        this.rootMenuNode = createRef()
     }
 
-    private readonly rootMenuNode: React.RefObject<HTMLDivElement>
+    private readonly rootMenuNode: RefObject<HTMLDivElement>
 
     componentDidMount(): void {
         /**

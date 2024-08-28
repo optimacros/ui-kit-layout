@@ -1,17 +1,18 @@
-import React from 'react'
+import { Component, JSX } from 'react'
 
-import styles from './HeaderUserMenu.module.css'
-import { MenuElement } from 'types/HeaderMenu'
 import { HeaderMenu } from '../HeaderMenu'
 import { HeaderNotification } from '../HeaderNotification'
+import { MenuElement } from 'types/HeaderMenu'
 import { Notification } from 'types/Notification'
+
+import styles from './HeaderUserMenu.module.css'
 
 interface HeaderUserMenuProps {
     elements: MenuElement[];
     notification: Notification;
 }
 
-export class HeaderUserMenu extends React.Component<HeaderUserMenuProps> {
+export class HeaderUserMenu extends Component<HeaderUserMenuProps> {
     render(): JSX.Element {
         const { elements, notification } = this.props
 

@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "build2": "tsc --p ./tsconfig-build.json && vite build",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "preview": "vite preview",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
     "storybook": "storybook dev --no-open",

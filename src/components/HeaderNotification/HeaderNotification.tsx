@@ -1,13 +1,14 @@
 import classNames from 'classnames'
-
-import { HeaderNotificationBadge } from './HeaderNotificationBadge'
+import { JSX } from 'react'
 import { Icon } from 'ui-kit-core'
 
-import styles from './HeaderNotification.module.css'
+import { HeaderNotificationBadge } from './HeaderNotificationBadge'
 import { Notification } from 'types/Notification'
 
+import styles from './HeaderNotification.module.css'
+
 interface Props {
-    notification: Notification
+    notification: Notification;
 }
 
 export function HeaderNotification({ notification }: Props): JSX.Element | null {

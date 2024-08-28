@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
-import React from 'react'
+import { Component, createRef, RefObject, JSX } from 'react'
 
 import { HeaderMenuElementContainer } from './HeaderMenuElementContainer'
 import { HeaderSubMenu } from './HeaderSubMenu'
@@ -17,14 +17,14 @@ type State = {
     showMenu: boolean;
 }
 
-export class HeaderMenuElement extends React.Component<Props, State> {
+export class HeaderMenuElement extends Component<Props, State> {
     constructor(props: Props) {
         super(props)
 
-        this.node = React.createRef()
+        this.node = createRef()
     }
 
-    private readonly node: React.RefObject<HTMLLIElement>
+    private readonly node: RefObject<HTMLLIElement>
 
     state = {
         showMenu: false,

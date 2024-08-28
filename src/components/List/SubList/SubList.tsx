@@ -1,6 +1,6 @@
-﻿import classNames from 'classnames'
+import classNames from 'classnames'
 import type { PropsWithChildren, MouseEvent } from 'react'
-import { useState } from 'react'
+import { useState, JSX } from 'react'
 
 import { ListItem } from '../ListItem'
 

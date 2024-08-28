@@ -1,4 +1,5 @@
-﻿import classNames from 'classnames'
+import classNames from 'classnames'
+import { JSX } from 'react'
 import { ReactSVG } from 'react-svg'
 
 import iconArrowRight from 'icons/icon-arrow-right.svg'
@@ -31,7 +32,7 @@ export function ListItemContent({ icon, shouldShowRightIcon = false, text }: Lis
                 ? (
                     <div className={classNames(
                         styles.Icon,
-                        styles.RightIcon
+                        styles.RightIcon,
                     )}
                     >
                         <ReactSVG src={iconArrowRight}/>

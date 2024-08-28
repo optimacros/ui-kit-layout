@@ -1,9 +1,8 @@
 import classNames from 'classnames'
-import React from 'react'
-
+import { Component, JSX } from 'react'
+import { Icon } from 'ui-kit-core'
 
 import styles from './ToggleIcon.module.css'
-import { Icon } from 'ui-kit-core';
 
 type Props = {
     isOpen?: boolean;
@@ -12,9 +11,9 @@ type Props = {
     iconClassName?: string;
 }
 
-export class ToggleIcon extends React.Component<Props> {
+export class ToggleIcon extends Component<Props> {
     render(): JSX.Element {
-        const { isOpen, handleClick, wrapperClassName, iconClassName } = this.props;
+        const { isOpen, handleClick, wrapperClassName, iconClassName } = this.props
         const iconValue = isOpen
             ? 'keyboard_arrow_right'
             : 'keyboard_arrow_left'
@@ -30,9 +29,9 @@ export class ToggleIcon extends React.Component<Props> {
                 [styles.ToggleButtonWrapper__Close]: isOpen,
                 [styles.ToggleButtonWrapper__Open]: !isOpen,
             },
-        );
+        )
 
-        const iconClassNameFinal = classNames(styles.ToggleButtonIcon, iconClassName);
+        const iconClassNameFinal = classNames(styles.ToggleButtonIcon, iconClassName)
 
         return (
             <div
@@ -50,6 +49,6 @@ export class ToggleIcon extends React.Component<Props> {
                     value={iconValue}
                 />
             </div>
-        );
+        )
     }
 }

@@ -1,9 +1,9 @@
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
-import React from 'react'
+import { Component, JSX } from 'react'
+import { Icon } from 'ui-kit-core'
 
 import type { MenuElement } from 'types/HeaderMenu'
-import { Icon } from 'ui-kit-core'
 
 import styles from './HeaderMenu.module.css'
 
@@ -12,7 +12,7 @@ type Props = {
     isFirstLevel?: boolean;
 }
 
-export class HeaderMenuElementContainer extends React.Component<Props> {
+export class HeaderMenuElementContainer extends Component<Props> {
     render(): JSX.Element {
         const { element } = this.props
 

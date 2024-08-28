@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { isEmpty, map } from 'lodash'
-import React from 'react'
+import { Component, JSX } from 'react'
 
 import { HeaderMenuElement } from './HeaderMenuElement'
 import type { MenuElement } from 'types/HeaderMenu'
@@ -12,7 +12,7 @@ type Props = {
     className?: string;
 }
 
-export class HeaderMenu extends React.Component<Props> {
+export class HeaderMenu extends Component<Props> {
     render(): JSX.Element | null {
         if (isEmpty(this.props.elements)) {
             return null

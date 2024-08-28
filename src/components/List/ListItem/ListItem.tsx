@@ -1,12 +1,13 @@
-﻿import classNames from 'classnames'
+import classNames from 'classnames'
 import { isUndefined } from 'lodash'
 import type { MouseEventHandler, PropsWithChildren } from 'react'
+import { JSX } from 'react'
+import { ReactSVG } from 'react-svg'
 
 import { ListItemContent } from './ListItemContent'
 import settingsIcon from 'icons/icon-settings.svg'
 
 import styles from './ListItem.module.css'
-import { ReactSVG } from 'react-svg'
 
 export interface ListItemProps {
     text: string;
@@ -28,7 +29,7 @@ export function ListItem(props: PropsWithChildren<ListItemProps>): JSX.Element {
         text,
         nestingLevel,
         onClick,
-        adminUrl
+        adminUrl,
     } = props
 
     const className = classNames({
@@ -55,9 +56,12 @@ export function ListItem(props: PropsWithChildren<ListItemProps>): JSX.Element {
                 </a>
                 {adminUrl
                     ? (
-                        <a className={styles.Setting} target="_blank" href={adminUrl}>
-                            <div className={styles.Icon}
-                            >
+                        <a className={styles.Setting}
+                            target="_blank"
+                            href={adminUrl}
+                            rel="noreferrer"
+                        >
+                            <div className={styles.Icon}>
                                 <ReactSVG src={settingsIcon}/>
                             </div>
                         </a>
