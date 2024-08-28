@@ -1,8 +1,9 @@
 import classNames from 'classnames'
 import { JSX } from 'react'
-import { Icon } from 'ui-kit-core'
+import { ReactSVG } from 'react-svg'
 
 import { HeaderNotificationBadge } from './HeaderNotificationBadge'
+import iconBell from 'icons/icon-bell.svg'
 import { Notification } from 'types/Notification'
 
 import styles from './HeaderNotification.module.css'
@@ -21,21 +22,15 @@ export function HeaderNotification({ notification }: Props): JSX.Element | null 
         [styles.Active]: notification.active,
     })
 
-    const icon = 'notifications' + (notification.active
-        ? ''
-        : '_none'
-    )
-
     return (
         <div
             className={className}
             onClick={notification.toggle}
         >
             <HeaderNotificationBadge notificationUnreadCount={notification.unreadCount} />
-            <Icon
-                value={icon}
-                className={styles.NotificationIcon}
-            />
+            <div className={styles.NotificationIcon}>
+                <ReactSVG src={iconBell}/>
+            </div>
         </div>
     )
 }

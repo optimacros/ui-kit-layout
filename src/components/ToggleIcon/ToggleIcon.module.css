@@ -17,10 +17,6 @@
         justify-content: center;
     }
 
-    &:first-child {
-        margin-right: -14px;
-    }
-
     svg path {
         stroke: var(--contents-toggleBtn-color);
     }

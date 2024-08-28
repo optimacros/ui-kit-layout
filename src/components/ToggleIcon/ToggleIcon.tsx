@@ -1,6 +1,9 @@
 import classNames from 'classnames'
 import { Component, JSX } from 'react'
-import { Icon } from 'ui-kit-core'
+import { ReactSVG } from 'react-svg'
+
+import iconDoubleArrowLeft from 'icons/icon-double-arrow-left.svg'
+import iconDoubleArrowRight from 'icons/icon-double-arrow-right.svg'
 
 import styles from './ToggleIcon.module.css'
 
@@ -15,8 +18,8 @@ export class ToggleIcon extends Component<Props> {
     render(): JSX.Element {
         const { isOpen, handleClick, wrapperClassName, iconClassName } = this.props
         const iconValue = isOpen
-            ? 'keyboard_arrow_right'
-            : 'keyboard_arrow_left'
+            ? iconDoubleArrowLeft
+            : iconDoubleArrowRight
 
         const title = isOpen
             ? 'Hide panel'
@@ -40,13 +43,8 @@ export class ToggleIcon extends Component<Props> {
                 onClick={handleClick}
                 title={title}
             >
-                <Icon
-                    className={iconClassNameFinal}
-                    value={iconValue}
-                />
-                <Icon
-                    className={iconClassNameFinal}
-                    value={iconValue}
+                <ReactSVG className={iconClassNameFinal}
+                    src={iconValue}
                 />
             </div>
         )
