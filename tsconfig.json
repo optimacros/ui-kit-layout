@@ -5,6 +5,8 @@
         "target": "ES2020",
         "useDefineForClassFields": true,
         "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
         "lib": [
             "ES2020",
             "DOM",

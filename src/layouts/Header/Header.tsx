@@ -1,6 +1,7 @@
+import { Component, JSX } from 'react'
+
 import { HeaderMenu, HeaderUserMenu } from 'components'
 import { ToggleIcon } from 'components/ToggleIcon/ToggleIcon'
-import React from 'react'
 import type { MenuElement } from 'types/HeaderMenu'
 import { Notification } from 'types/Notification'
 
@@ -13,7 +14,7 @@ interface HeaderProps {
     showToggleIcon?: boolean;
 }
 
-export class Header extends React.Component<HeaderProps> {
+export class Header extends Component<HeaderProps> {
     render(): JSX.Element {
         const { elementsMenu, elementsUserMenu, notification, showToggleIcon = true } = this.props
 

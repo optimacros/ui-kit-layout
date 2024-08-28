@@ -1,4 +1,4 @@
-import React from 'react'
+import { Component, JSX } from 'react'
 
 import styles from './Footer.module.css'
 
@@ -6,7 +6,7 @@ interface Props {
     appVersion: string;
 }
 
-export class Footer extends React.Component<Props> {
+export class Footer extends Component<Props> {
     render(): JSX.Element {
         return (
             <footer className={styles.Footer}>

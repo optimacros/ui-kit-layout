@@ -1,5 +1,6 @@
+import { Component, ReactNode } from 'react'
+
 import { List } from 'components/List/List'
-import React from 'react'
 import { ListItem } from 'types/SidebarItem'
 import { getSidebarData } from 'utils/Sidebar/getSidebarData'
 
@@ -10,8 +11,8 @@ interface Props {
     content: ListItem[][];
 }
 
-export class Sidebar extends React.Component<Props> {
-    render(): React.ReactNode {
+export class Sidebar extends Component<Props> {
+    render(): ReactNode {
         const { folders, content } = this.props
         const sidebarData = getSidebarData(folders, ...content)
 
