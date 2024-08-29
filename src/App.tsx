@@ -1,6 +1,7 @@
 import { Footer, Header, Sidebar } from 'components'
 import iconApp from 'icons/icon-app.svg'
 import iconFolderClose from 'icons/icon-folder-close.svg'
+import iconUser from 'icons/icon-user.svg'
 import iconWorkspace from 'icons/icon-workspace.svg'
 import { ListItem } from 'types/SidebarItem'
 
@@ -57,12 +58,12 @@ const userElements = [
     {
         id: '10',
         title: 'User Name',
-        icon: 'account_circle',
+        icon: iconUser,
         disabled: false,
         children: [
             {
                 id: '11',
-                icon: 'account_circle',
+                icon: iconUser,
                 title: 'Profile',
                 disabled: false,
                 open: () => console.log('click'),

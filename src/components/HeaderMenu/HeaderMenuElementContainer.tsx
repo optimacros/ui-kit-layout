@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
 import { Component, JSX } from 'react'
+import { ReactSVG } from 'react-svg'
 import { Icon } from 'ui-kit-core'
 
 import type { MenuElement } from 'types/HeaderMenu'
@@ -46,10 +47,15 @@ export class HeaderMenuElementContainer extends Component<Props> {
 
         return (
             <div className={styles.Element_IconContainer}>
-                <Icon
-                    className={styles.Element_Icon}
-                    value={element.icon}
-                />
+                {element.icon.slice(-4) === '.svg'
+                    ? <ReactSVG src={element.icon} />
+                    : (
+                        <Icon
+                            className={styles.Element_Icon}
+                            value={element.icon}
+                        />
+                    )
+                }
             </div>
         )
     }
