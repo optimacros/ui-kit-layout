@@ -47,7 +47,7 @@ export class HeaderMenuElementContainer extends Component<Props> {
 
         return (
             <div className={styles.Element_IconContainer}>
-                {element.icon.slice(-4) === '.svg'
+                {element.icon.includes('.svg')
                     ? <ReactSVG src={element.icon} />
                     : (
                         <Icon
