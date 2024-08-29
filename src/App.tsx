@@ -1,10 +1,7 @@
-
-import { Header } from './layouts/Header/Header'
+import { Footer, Header, Sidebar } from 'components'
 import iconApp from 'icons/icon-app.svg'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconWorkspace from 'icons/icon-workspace.svg'
-import { Footer } from 'layouts/Footer/Footer'
-import { Sidebar } from 'layouts/Sidebar/Sidebar'
 import { ListItem } from 'types/SidebarItem'
 
 import style from './App.module.css'
