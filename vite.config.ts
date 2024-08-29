@@ -28,8 +28,8 @@ export default defineConfig({
         tsconfigPaths(),
         dts({
             include: ['./src/components/**/*.{ts,tsx}'],
+            entryRoot: './src/components',
             insertTypesEntry: true,
-            outDir: ['.'],
         }),
     ],
     css: {
@@ -103,7 +103,7 @@ export default defineConfig({
                 },
                 assetFileNames: 'assets/index[extname]',
                 entryFileNames: '[name].js',
-                dir: 'components',
+                dir: 'dist',
                 globals: {
                     react: 'React',
                     'react-dom': 'ReactDOM',
