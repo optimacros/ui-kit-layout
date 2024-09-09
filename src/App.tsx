@@ -1,4 +1,5 @@
-import { Footer, Header, Sidebar } from 'components'
+import { Footer, Header, HeaderMenu, HeaderUserMenu, Sidebar } from 'components'
+import { ToggleIcon } from 'components/ToggleIcon/ToggleIcon'
 import iconApp from 'icons/icon-app.svg'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconUser from 'icons/icon-user.svg'
@@ -6,6 +7,7 @@ import iconWorkspace from 'icons/icon-workspace.svg'
 import { ListItem } from 'types/SidebarItem'
 
 import style from './App.module.css'
+import headerStyle from 'components/Header/Header.module.css'
 
 const elements = [
     {
@@ -220,11 +222,22 @@ const App = () => {
     return (
         <div className={style.App}>
             <div className={style.HeaderWrapper}>
-                <Header
-                    elementsMenu={elements}
-                    elementsUserMenu={userElements}
-                    notification={notification}
-                />
+                <Header>
+                    <HeaderMenu
+                        elements={elements}
+                        className={headerStyle.HeaderMenu}
+                    />
+
+                    <HeaderUserMenu
+                        elements={userElements}
+                        notification={notification}
+                    />
+
+                    <ToggleIcon
+                        wrapperClassName={headerStyle.ToggleIconWrapper}
+                        iconClassName={headerStyle.ToggleIcon}
+                    />
+                </Header>
             </div>
             <div className={style.MainWrapper}>
                 <div className={style.ContentWrapper}>
