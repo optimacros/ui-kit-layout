@@ -31,10 +31,10 @@ export class Header extends Component<HeaderProps> {
                 />
 
                 {showToggleIcon && (
-                <ToggleIcon
-                    wrapperClassName={styles.ToggleIconWrapper}
-                    iconClassName={styles.ToggleIcon}
-                />
+                    <ToggleIcon
+                        wrapperClassName={styles.ToggleIconWrapper}
+                        iconClassName={styles.ToggleIcon}
+                    />
                 )}
             </header>
         )

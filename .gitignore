@@ -1,31 +1,18 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
 .vscode
 node_modules*
 bower_components*
 storybook-static*
 
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+*.swp
+*.swo
+*.swl
+*.swn
+*.swm
+*.swk
+*.swi
+*.swj
 
 .DS_Store
 *.log
@@ -33,7 +20,7 @@ reports
 coverage
 
 lib
-/components
+/dist
 
 src/version.json
 

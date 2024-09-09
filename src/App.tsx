@@ -13,24 +13,28 @@ const elements = [
         icon: 'list',
         title: 'AM Landing (Applications)',
         disabled: false,
+        // eslint-disable-next-line no-console
         open: () => console.log('click'),
     },
     {
         id: '2',
         title: 'Tasks manager',
         disabled: false,
+        // eslint-disable-next-line no-console
         open: () => console.log('click'),
     },
     {
         id: '3',
         title: 'Task output',
         disabled: false,
+        // eslint-disable-next-line no-console
         open: () => console.log('click'),
     },
     {
         id: '4',
         title: 'General parameters',
         disabled: false,
+        // eslint-disable-next-line no-console
         open: () => console.log('click'),
     },
     {
@@ -48,6 +52,7 @@ const elements = [
                 icon: 'help_outline',
                 title: 'App Version',
                 disabled: false,
+                // eslint-disable-next-line no-console
                 open: () => console.log('click'),
             },
         ],
@@ -66,6 +71,7 @@ const userElements = [
                 icon: iconUser,
                 title: 'Profile',
                 disabled: false,
+                // eslint-disable-next-line no-console
                 open: () => console.log('click'),
             },
             {
@@ -73,6 +79,7 @@ const userElements = [
                 icon: 'help_outline',
                 title: 'App version',
                 disabled: false,
+                // eslint-disable-next-line no-console
                 open: () => console.log('click'),
             },
             {
@@ -80,6 +87,7 @@ const userElements = [
                 icon: 'settings',
                 title: 'Settings',
                 disabled: false,
+                // eslint-disable-next-line no-console
                 open: () => console.log('click'),
             },
             {
@@ -87,6 +95,7 @@ const userElements = [
                 icon: 'input',
                 title: 'Log Out',
                 disabled: false,
+                // eslint-disable-next-line no-console
                 open: () => console.log('click'),
             },
         ],
@@ -97,6 +106,7 @@ const notification = {
     unreadCount: 0,
     active: false,
     visible: true,
+    // eslint-disable-next-line no-console
     toggle: () => console.log('toggle'),
 }
 
