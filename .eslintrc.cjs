@@ -19,11 +19,11 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'], // Your TypeScript files extension
-      
+
       // As mentioned in the comments, you should extend TypeScript plugins here,
       // instead of extending them outside the `overrides`.
       // If you don't want to extend any rules, you don't need an `extends` attribute.
-      
+
       parserOptions: {
         project: ['./tsconfig.json'], // Specify it only for TypeScript files
       },
@@ -342,7 +342,7 @@ module.exports = {
       "allowLiteral": false,
       "allowObject": true,
     }],
-    
+
     'max-depth': [2, 3],
     'max-len': [2, 120, 2],
     'max-params': 0,
@@ -352,7 +352,7 @@ module.exports = {
     'jsx-a11y/mouse-events-have-key-events': 'off',
     'jsx-a11y/alt-text': 'off',
     'jsx-a11y/no-autofocus': 'off',
-    
+
     // NOTE: Import
     'import/extensions': 'off',
     'import/no-cycle': 'off',
