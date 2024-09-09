@@ -4,15 +4,15 @@ import { ReactSVG } from 'react-svg'
 
 import iconArrowRight from 'icons/icon-arrow-right.svg'
 
-import styles from './ListItem.module.css'
+import styles from './SidebarListItem.module.css'
 
-interface ListItemContentProps {
+interface SidebarListItemContentProps {
     icon?: string | null;
     shouldShowRightIcon?: boolean;
     text: string;
 }
 
-export function ListItemContent({ icon, shouldShowRightIcon = false, text }: ListItemContentProps): JSX.Element {
+export function ListItemContent({ icon, shouldShowRightIcon = false, text }: SidebarListItemContentProps): JSX.Element {
     return (
         <>
             {icon

@@ -1,24 +1,27 @@
 import { JSX } from 'react'
 
-import { ListItem as ListItemComponent } from './ListItem'
-import { SubList } from './SubList'
+import { SidebarListItem } from './SidebarListItem'
+import { SidebarSubList } from './SidebarSubList'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconFolderOpen from 'icons/icon-folder-open.svg'
 import { ListItem } from 'types/SidebarItem'
 
-import styles from './List.module.css'
+import styles from './SidebarList.module.css'
 
-interface ListProps {
-    listData: ListItem[];
+interface SidebarListProps {
+  listData: ListItem[];
 }
 
-export function List(props: ListProps): JSX.Element {
+export function SidebarList(props: SidebarListProps): JSX.Element {
     const { listData } = props
 
-    const renderListItem = (listItem: ListItem, nestingLevel = 1): JSX.Element => {
+    const renderListItem = (
+        listItem: ListItem,
+        nestingLevel = 1,
+    ): JSX.Element => {
         if (listItem.expand?.length) {
             return (
-                <SubList
+                <SidebarSubList
                     nestingLevel={nestingLevel}
                     key={listItem.id}
                     text={listItem.name}
@@ -26,13 +29,15 @@ export function List(props: ListProps): JSX.Element {
                     expandIcon={iconFolderOpen}
                     isExpand={false}
                 >
-                    {listItem.expand.map(item => renderListItem(item, nestingLevel + 1))}
-                </SubList>
+                    {listItem.expand.map((item) =>
+                        renderListItem(item, nestingLevel + 1),
+                    )}
+                </SidebarSubList>
             )
         }
 
         return (
-            <ListItemComponent
+            <SidebarListItem
                 nestingLevel={nestingLevel}
                 key={listItem.id}
                 href={listItem.href}
@@ -45,8 +50,8 @@ export function List(props: ListProps): JSX.Element {
     }
 
     return (
-        <div className={styles.List}>
-            {listData.map(item => renderListItem(item))}
+        <div className={styles.SidebarList}>
+            {listData.map((item) => renderListItem(item))}
         </div>
     )
 }

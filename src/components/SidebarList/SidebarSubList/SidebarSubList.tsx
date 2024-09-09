@@ -2,44 +2,37 @@ import classNames from 'classnames'
 import type { PropsWithChildren, MouseEvent } from 'react'
 import { useState, JSX } from 'react'
 
-import { ListItem } from '../ListItem'
+import { SidebarListItem } from '../SidebarListItem'
 
-import styles from './SubList.module.css'
+import styles from './SidebarSubList.module.css'
 
-interface SubListProps {
-    text: string;
-    nestingLevel: number;
-    isExpand?: boolean;
-    icon?: string;
-    expandIcon?: string;
+interface SidebarSubListProps {
+  text: string;
+  nestingLevel: number;
+  isExpand?: boolean;
+  icon?: string;
+  expandIcon?: string;
 }
 
-export function SubList(props: PropsWithChildren<SubListProps>): JSX.Element {
-    const {
-        text,
-        icon,
-        expandIcon,
-        children,
-        isExpand,
-        nestingLevel,
-    } = props
+export function SidebarSubList(props: PropsWithChildren<SidebarSubListProps>): JSX.Element {
+    const { text, icon, expandIcon, children, isExpand, nestingLevel } = props
 
     const [expand, setExpand] = useState<boolean>(isExpand || false)
 
     const subListClassNames = classNames({
-        [styles.SubList]: true,
+        [styles.SidebarSubList]: true,
         [styles.Expanded]: expand,
     })
 
     const handleClick = (e: MouseEvent): void => {
         e.stopPropagation()
 
-        setExpand(prev => !prev)
+        setExpand((prev) => !prev)
     }
 
     return (
         <div className={subListClassNames}>
-            <ListItem
+            <SidebarListItem
                 nestingLevel={nestingLevel}
                 text={text}
                 icon={expand
@@ -47,9 +40,7 @@ export function SubList(props: PropsWithChildren<SubListProps>): JSX.Element {
                     : icon}
                 onClick={handleClick}
             />
-            <div className={styles.Content}>
-                {children}
-            </div>
+            <div className={styles.Content}>{children}</div>
         </div>
     )
 }

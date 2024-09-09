@@ -1,6 +1,6 @@
 import { Component, ReactNode } from 'react'
 
-import { List } from 'components/List/List'
+import { SidebarList } from 'components/SidebarList'
 import { ListItem } from 'types/SidebarItem'
 import { getSidebarData } from 'utils/Sidebar/getSidebarData'
 
@@ -18,7 +18,7 @@ export class Sidebar extends Component<Props> {
 
         return (
             <div className={styles.Sidebar} >
-                <List
+                <SidebarList
                     listData={sidebarData}
                 />
             </div>

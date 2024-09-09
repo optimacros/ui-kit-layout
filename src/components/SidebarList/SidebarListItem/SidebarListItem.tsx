@@ -4,12 +4,12 @@ import type { MouseEventHandler, PropsWithChildren } from 'react'
 import { JSX } from 'react'
 import { ReactSVG } from 'react-svg'
 
-import { ListItemContent } from './ListItemContent'
+import { ListItemContent } from './SidebarListItemContent'
 import settingsIcon from 'icons/icon-settings.svg'
 
-import styles from './ListItem.module.css'
+import styles from './SidebarListItem.module.css'
 
-export interface ListItemProps {
+export interface SidebarListItemProps {
     text: string;
     nestingLevel: number;
     active?: boolean;
@@ -21,7 +21,7 @@ export interface ListItemProps {
     adminUrl?: string;
 }
 
-export function ListItem(props: PropsWithChildren<ListItemProps>): JSX.Element {
+export function SidebarListItem(props: PropsWithChildren<SidebarListItemProps>): JSX.Element {
     const {
         active = false,
         href,
@@ -33,7 +33,7 @@ export function ListItem(props: PropsWithChildren<ListItemProps>): JSX.Element {
     } = props
 
     const className = classNames({
-        [styles.ListItem]: true,
+        [styles.SidebarListItem]: true,
         [styles.Selected]: active,
     })
 
