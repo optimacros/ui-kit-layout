@@ -44,6 +44,10 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'react/display-name': 1,
     'react/forbid-prop-types': 0,
+    'react/function-component-definition': [
+        2, 
+        { namedComponents: 'arrow-function' },
+     ],
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 1,
     'react/jsx-boolean-value': 1,

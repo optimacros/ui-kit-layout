@@ -1,4 +1,4 @@
-import { JSX } from 'react'
+import { FC, JSX } from 'react'
 
 import { SidebarListItem } from './SidebarListItem'
 import { SidebarSubList } from './SidebarSubList'
@@ -12,7 +12,7 @@ interface SidebarListProps {
   listData: ListItem[];
 }
 
-export function SidebarList(props: SidebarListProps): JSX.Element {
+export const SidebarList: FC<SidebarListProps> = (props) => {
     const { listData } = props
 
     const renderListItem = (

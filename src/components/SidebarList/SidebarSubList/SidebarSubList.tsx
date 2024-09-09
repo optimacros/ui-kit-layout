@@ -1,6 +1,6 @@
 import classNames from 'classnames'
-import type { PropsWithChildren, MouseEvent } from 'react'
-import { useState, JSX } from 'react'
+import type { MouseEvent, FC, PropsWithChildren } from 'react'
+import { useState } from 'react'
 
 import { SidebarListItem } from '../SidebarListItem'
 
@@ -14,7 +14,7 @@ interface SidebarSubListProps {
   expandIcon?: string;
 }
 
-export function SidebarSubList(props: PropsWithChildren<SidebarSubListProps>): JSX.Element {
+export const SidebarSubList: FC<PropsWithChildren<SidebarSubListProps>> = (props) => {
     const { text, icon, expandIcon, children, isExpand, nestingLevel } = props
 
     const [expand, setExpand] = useState<boolean>(isExpand || false)

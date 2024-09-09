@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { JSX } from 'react'
+import { FC } from 'react'
 import { ReactSVG } from 'react-svg'
 
 import { HeaderNotificationBadge } from './HeaderNotificationBadge'
@@ -12,7 +12,9 @@ interface Props {
     notification: Notification;
 }
 
-export function HeaderNotification({ notification }: Props): JSX.Element | null {
+export const HeaderNotification: FC<Props> = (props) => {
+    const { notification } = props
+
     if (!notification.visible) {
         return null
     }

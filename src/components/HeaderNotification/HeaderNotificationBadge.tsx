@@ -1,4 +1,4 @@
-import { JSX } from 'react'
+import { FC } from 'react'
 
 import styles from './HeaderNotificationBadge.module.css'
 
@@ -6,7 +6,8 @@ interface HeaderNotificationBadgeProps {
     notificationUnreadCount: number;
 }
 
-export function HeaderNotificationBadge({ notificationUnreadCount }: HeaderNotificationBadgeProps): JSX.Element | null {
+export const HeaderNotificationBadge: FC<HeaderNotificationBadgeProps> = (props) => {
+    const { notificationUnreadCount } = props
     const isEmptyUnreadNotification = notificationUnreadCount <= 0
 
     if (isEmptyUnreadNotification) {

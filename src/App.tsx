@@ -216,7 +216,7 @@ const appManagersMock: ListItem[] = [
     },
 ]
 
-function App() {
+const App = () => {
     return (
         <div className={style.App}>
             <div className={style.HeaderWrapper}>

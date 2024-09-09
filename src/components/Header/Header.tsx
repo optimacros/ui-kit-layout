@@ -1,4 +1,4 @@
-import { Component, JSX } from 'react'
+import { FC } from 'react'
 
 import { HeaderMenu, HeaderUserMenu } from 'components'
 import { ToggleIcon } from 'components/ToggleIcon/ToggleIcon'
@@ -14,29 +14,27 @@ interface HeaderProps {
     showToggleIcon?: boolean;
 }
 
-export class Header extends Component<HeaderProps> {
-    render(): JSX.Element {
-        const { elementsMenu, elementsUserMenu, notification, showToggleIcon = true } = this.props
+export const Header: FC<HeaderProps> = (props) => {
+    const { elementsMenu, elementsUserMenu, notification, showToggleIcon = true } = props
 
-        return (
-            <header className={styles.Header}>
-                <HeaderMenu
-                    elements={elementsMenu}
-                    className={styles.HeaderMenu}
-                />
+    return (
+        <header className={styles.Header}>
+            <HeaderMenu
+                elements={elementsMenu}
+                className={styles.HeaderMenu}
+            />
 
-                <HeaderUserMenu
-                    elements={elementsUserMenu}
-                    notification={notification}
-                />
+            <HeaderUserMenu
+                elements={elementsUserMenu}
+                notification={notification}
+            />
 
-                {showToggleIcon && (
-                    <ToggleIcon
-                        wrapperClassName={styles.ToggleIconWrapper}
-                        iconClassName={styles.ToggleIcon}
-                    />
-                )}
-            </header>
-        )
-    }
+            {showToggleIcon && (
+            <ToggleIcon
+                wrapperClassName={styles.ToggleIconWrapper}
+                iconClassName={styles.ToggleIcon}
+            />
+            )}
+        </header>
+    )
 }

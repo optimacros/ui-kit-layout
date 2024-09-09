@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { JSX } from 'react'
+import { FC } from 'react'
 import { ReactSVG } from 'react-svg'
 
 import iconArrowRight from 'icons/icon-arrow-right.svg'
@@ -12,7 +12,9 @@ interface SidebarListItemContentProps {
     text: string;
 }
 
-export function ListItemContent({ icon, shouldShowRightIcon = false, text }: SidebarListItemContentProps): JSX.Element {
+export const ListItemContent: FC<SidebarListItemContentProps> = (props) => {
+    const { icon, shouldShowRightIcon = false, text } = props
+
     return (
         <>
             {icon

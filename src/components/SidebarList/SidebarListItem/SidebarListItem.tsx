@@ -1,7 +1,6 @@
 import classNames from 'classnames'
 import { isUndefined } from 'lodash'
-import type { MouseEventHandler, PropsWithChildren } from 'react'
-import { JSX } from 'react'
+import type { FC, MouseEventHandler } from 'react'
 import { ReactSVG } from 'react-svg'
 
 import { ListItemContent } from './SidebarListItemContent'
@@ -21,7 +20,7 @@ export interface SidebarListItemProps {
     adminUrl?: string;
 }
 
-export function SidebarListItem(props: PropsWithChildren<SidebarListItemProps>): JSX.Element {
+export const SidebarListItem:FC<SidebarListItemProps> = (props) => {
     const {
         active = false,
         href,

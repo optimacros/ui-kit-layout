@@ -1,4 +1,4 @@
-import { Component, ReactNode } from 'react'
+import { FC } from 'react'
 
 import { SidebarList } from 'components/SidebarList'
 import { ListItem } from 'types/SidebarItem'
@@ -11,17 +11,15 @@ interface Props {
     content: ListItem[][];
 }
 
-export class Sidebar extends Component<Props> {
-    render(): ReactNode {
-        const { folders, content } = this.props
-        const sidebarData = getSidebarData(folders, ...content)
+export const Sidebar: FC<Props> = (props) => {
+    const { folders, content } = props
+    const sidebarData = getSidebarData(folders, ...content)
 
-        return (
-            <div className={styles.Sidebar} >
-                <SidebarList
-                    listData={sidebarData}
-                />
-            </div>
-        )
-    }
+    return (
+        <div className={styles.Sidebar} >
+            <SidebarList
+                listData={sidebarData}
+            />
+        </div>
+    )
 }
