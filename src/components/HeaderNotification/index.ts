@@ -1,2 +1,1 @@
-export { HeaderNotification } from './HeaderNotification'
-export type { HeaderNotificationProps } from './/HeaderNotification'
+export * from './HeaderNotification'
