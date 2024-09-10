@@ -6,12 +6,12 @@ import { getSidebarData } from 'utils/Sidebar/getSidebarData'
 
 import styles from './Sidebar.module.css'
 
-interface Props {
+export interface SidebarProps {
     folders: SidebarListItem[];
     content: SidebarListItem[][];
 }
 
-export const Sidebar: FC<Props> = (props) => {
+export const Sidebar: FC<SidebarProps> = (props) => {
     const { folders, content } = props
     const sidebarData = getSidebarData(folders, ...content)
 

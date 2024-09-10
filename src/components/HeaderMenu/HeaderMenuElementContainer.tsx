@@ -8,12 +8,12 @@ import { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 
-type Props = {
+export interface HeaderMenuElementContainerProps {
     element: MenuElement;
     isFirstLevel?: boolean;
 }
 
-export class HeaderMenuElementContainer extends Component<Props> {
+export class HeaderMenuElementContainer extends Component<HeaderMenuElementContainerProps> {
     render(): JSX.Element {
         const { element } = this.props
 

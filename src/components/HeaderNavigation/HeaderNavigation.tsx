@@ -3,12 +3,12 @@ import { Icon } from 'ui-kit-core'
 
 import styles from './HeaderNavigation.module.css'
 
-type Props = {
+export interface HeaderNavigationProps {
     title: string;
     onClick: () => void;
 }
 
-export class HeaderNavigation extends Component<Props> {
+export class HeaderNavigation extends Component<HeaderNavigationProps> {
     render(): JSX.Element {
         return (
             <div

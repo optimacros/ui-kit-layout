@@ -8,7 +8,7 @@ import iconFolderOpen from 'icons/icon-folder-open.svg'
 
 import styles from './SidebarList.module.css'
 
-interface SidebarListProps {
+export interface SidebarListProps {
   listData: SidebarListItem[];
 }
 

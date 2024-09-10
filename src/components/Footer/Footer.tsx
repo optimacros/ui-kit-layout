@@ -2,11 +2,11 @@ import { FC } from 'react'
 
 import styles from './Footer.module.css'
 
-interface Props {
+export interface FooterProps {
     appVersion: string;
 }
 
-export const Footer: FC<Props> = (props: Props) => {
+export const Footer: FC<FooterProps> = (props) => {
     return (
         <footer className={styles.Footer}>
             <span className={styles.Version}>{props.appVersion}</span>

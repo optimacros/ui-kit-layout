@@ -8,7 +8,7 @@ import { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 
-type Props = {
+export interface HeaderMenuElementProps {
     element: MenuElement;
     firstLevel?: boolean;
 }
@@ -17,8 +17,8 @@ type State = {
     showMenu: boolean;
 }
 
-export class HeaderMenuElement extends Component<Props, State> {
-    constructor(props: Props) {
+export class HeaderMenuElement extends Component<HeaderMenuElementProps, State> {
+    constructor(props: HeaderMenuElementProps) {
         super(props)
 
         this.node = createRef()

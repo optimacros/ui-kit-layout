@@ -7,7 +7,7 @@ import { Notification } from 'components/HeaderNotification/type'
 
 import styles from './HeaderUserMenu.module.css'
 
-interface HeaderUserMenuProps {
+export interface HeaderUserMenuProps {
     elements: MenuElement[];
     notification: Notification;
 }

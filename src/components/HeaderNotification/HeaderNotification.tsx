@@ -8,11 +8,11 @@ import iconBell from 'icons/icon-bell.svg'
 
 import styles from './HeaderNotification.module.css'
 
-interface Props {
+export interface HeaderNotificationProps {
     notification: Notification;
 }
 
-export const HeaderNotification: FC<Props> = (props) => {
+export const HeaderNotification: FC<HeaderNotificationProps> = (props) => {
     const { notification } = props
 
     if (!notification.visible) {

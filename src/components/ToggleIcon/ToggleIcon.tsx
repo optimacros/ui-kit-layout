@@ -7,14 +7,14 @@ import iconDoubleArrowRight from 'icons/icon-double-arrow-right.svg'
 
 import styles from './ToggleIcon.module.css'
 
-type Props = {
+export interface ToggleIconProps {
     isOpen?: boolean;
     handleClick?: (() => void) | undefined;
     wrapperClassName?: string;
     iconClassName?: string;
 }
 
-export const ToggleIcon: FC<Props> = (props) => {
+export const ToggleIcon: FC<ToggleIconProps> = (props) => {
     const { isOpen, handleClick, wrapperClassName, iconClassName } = props
     const iconValue = isOpen
         ? iconDoubleArrowLeft

@@ -9,15 +9,15 @@ import styles from './HeaderMenu.module.css'
 const HEADER_MENU_OFFSET_SUBMENU = 2
 const HEADER_MENU_OFFSET_FROM_WINDOW = 20
 
-type Props = {
+export interface HeaderSubMenuProps {
     firstLevel?: boolean;
     rootElementNode: RefObject<HTMLLIElement>;
     element: MenuElement;
     elements: MenuElement[] | undefined;
 }
 
-export class HeaderSubMenu extends Component<Props> {
-    constructor(props: Props) {
+export class HeaderSubMenu extends Component<HeaderSubMenuProps> {
+    constructor(props: HeaderSubMenuProps) {
         super(props)
 
         this.rootMenuNode = createRef()

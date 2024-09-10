@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react'
 
 import styles from './Header.module.css'
 
-interface HeaderProps {
+export interface HeaderProps {
     children: ReactNode;
 }
 
