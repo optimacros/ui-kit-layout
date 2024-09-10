@@ -2,8 +2,8 @@ import { Component, JSX } from 'react'
 
 import { HeaderMenu } from '../HeaderMenu'
 import { HeaderNotification } from '../HeaderNotification'
-import { MenuElement } from 'types/HeaderMenu'
-import { Notification } from 'types/Notification'
+import { MenuElement } from 'components/HeaderMenu/type'
+import { Notification } from 'components/HeaderNotification/type'
 
 import styles from './HeaderUserMenu.module.css'
 

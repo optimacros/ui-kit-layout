@@ -1,11 +1,11 @@
-export interface ListItem {
+export interface SidebarListItem {
     folderId: number | null;
     type: string;
     name: string;
     id: number;
     href?: string;
     active?: boolean;
-    expand?: ListItem[];
+    expand?: SidebarListItem[];
     icon?: string;
     adminUrl?: string;
 }

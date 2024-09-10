@@ -1,14 +1,14 @@
 import { FC } from 'react'
 
 import { SidebarList } from 'components/SidebarList'
-import { ListItem } from 'types/SidebarItem'
+import { SidebarListItem } from 'components/SidebarList/type'
 import { getSidebarData } from 'utils/Sidebar/getSidebarData'
 
 import styles from './Sidebar.module.css'
 
 interface Props {
-    folders: ListItem[];
-    content: ListItem[][];
+    folders: SidebarListItem[];
+    content: SidebarListItem[][];
 }
 
 export const Sidebar: FC<Props> = (props) => {

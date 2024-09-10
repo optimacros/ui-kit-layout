@@ -1,10 +1,10 @@
 import { Footer, Header, HeaderMenu, HeaderUserMenu, Sidebar } from 'components'
+import { SidebarListItem } from 'components/SidebarList/type'
 import { ToggleIcon } from 'components/ToggleIcon/ToggleIcon'
 import iconApp from 'icons/icon-app.svg'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconUser from 'icons/icon-user.svg'
 import iconWorkspace from 'icons/icon-workspace.svg'
-import { ListItem } from 'types/SidebarItem'
 
 import style from './App.module.css'
 import headerStyle from 'components/Header/Header.module.css'
@@ -114,7 +114,7 @@ const notification = {
 
 // Sidebar mock
 
-const foldersMock: ListItem[] = [
+const foldersMock: SidebarListItem[] = [
     {
         folderId: null,
         type: 'folder',
@@ -148,7 +148,7 @@ const foldersMock: ListItem[] = [
     },
 ]
 
-const workspacesMock: ListItem[] = [
+const workspacesMock: SidebarListItem[] = [
     {
         folderId: 1,
         type: 'workspace',
@@ -183,7 +183,7 @@ const workspacesMock: ListItem[] = [
         icon: iconWorkspace,
     },
 ]
-const appManagersMock: ListItem[] = [
+const appManagersMock: SidebarListItem[] = [
     {
         folderId: 1,
         type: 'appManager',

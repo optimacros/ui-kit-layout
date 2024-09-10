@@ -4,7 +4,7 @@ import { Component, createRef, RefObject, JSX } from 'react'
 
 import { HeaderMenuElementContainer } from './HeaderMenuElementContainer'
 import { HeaderSubMenu } from './HeaderSubMenu'
-import type { MenuElement } from 'types/HeaderMenu'
+import { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 

@@ -3,7 +3,7 @@ import { isEmpty, map } from 'lodash'
 import { Component, JSX } from 'react'
 
 import { HeaderMenuElement } from './HeaderMenuElement'
-import type { MenuElement } from 'types/HeaderMenu'
+import { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 

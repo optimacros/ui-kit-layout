@@ -3,8 +3,8 @@ import { FC } from 'react'
 import { ReactSVG } from 'react-svg'
 
 import { HeaderNotificationBadge } from './HeaderNotificationBadge'
+import { Notification } from './type'
 import iconBell from 'icons/icon-bell.svg'
-import { Notification } from 'types/Notification'
 
 import styles from './HeaderNotification.module.css'
 

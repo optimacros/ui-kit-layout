@@ -1,11 +1,11 @@
 import { getRootFolders } from './getRootFolders'
-import { ListItem } from 'types/SidebarItem'
+import { SidebarListItem } from 'components/SidebarList/type'
 
 export function getSidebarData(
-    folders: ListItem[],
-    ...sidebarContent: ListItem[][]
-): ListItem[] {
-    const rootSidebarContent: ListItem[][] = sidebarContent.map(sidebarContentList =>
+    folders: SidebarListItem[],
+    ...sidebarContent: SidebarListItem[][]
+): SidebarListItem[] {
+    const rootSidebarContent: SidebarListItem[][] = sidebarContent.map(sidebarContentList =>
         sidebarContentList.filter(item => item.folderId === null),
     )
 

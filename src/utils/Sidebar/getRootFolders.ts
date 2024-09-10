@@ -1,11 +1,11 @@
-import { ListItem } from 'types/SidebarItem'
+import { SidebarListItem } from 'components/SidebarList/type'
 
 export function getRootFolders(
-    folders: ListItem[],
-    sidebarContent: ListItem[][],
+    folders: SidebarListItem[],
+    sidebarContent: SidebarListItem[][],
     insideExpand = false,
-): ListItem[] {
-    const rootFolders: ListItem[] = []
+): SidebarListItem[] {
+    const rootFolders: SidebarListItem[] = []
 
     folders.forEach(folder => {
         const shouldFolderSetToRootStructure = (folder.folderId === null && !insideExpand)
@@ -15,8 +15,8 @@ export function getRootFolders(
             return
         }
 
-        const folderContent: ListItem[] = []
-        const filterItems = (item: ListItem) => item.folderId === folder.id
+        const folderContent: SidebarListItem[] = []
+        const filterItems = (item: SidebarListItem) => item.folderId === folder.id
 
         const subFolders = folders.filter(filterItems)
 

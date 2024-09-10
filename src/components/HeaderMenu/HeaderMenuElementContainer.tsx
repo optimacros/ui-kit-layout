@@ -4,7 +4,7 @@ import { Component, JSX } from 'react'
 import { ReactSVG } from 'react-svg'
 import { Icon } from 'ui-kit-core'
 
-import type { MenuElement } from 'types/HeaderMenu'
+import { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 

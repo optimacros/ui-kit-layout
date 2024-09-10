@@ -1,22 +1,22 @@
 import { FC, JSX } from 'react'
 
-import { SidebarListItem } from './SidebarListItem'
+import { SidebarListItem as SidebarListItemComponent } from './SidebarListItem'
 import { SidebarSubList } from './SidebarSubList'
+import { SidebarListItem } from './type'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconFolderOpen from 'icons/icon-folder-open.svg'
-import { ListItem } from 'types/SidebarItem'
 
 import styles from './SidebarList.module.css'
 
 interface SidebarListProps {
-  listData: ListItem[];
+  listData: SidebarListItem[];
 }
 
 export const SidebarList: FC<SidebarListProps> = (props) => {
     const { listData } = props
 
     const renderListItem = (
-        listItem: ListItem,
+        listItem: SidebarListItem,
         nestingLevel = 1,
     ): JSX.Element => {
         if (listItem.expand?.length) {
@@ -37,7 +37,7 @@ export const SidebarList: FC<SidebarListProps> = (props) => {
         }
 
         return (
-            <SidebarListItem
+            <SidebarListItemComponent
                 nestingLevel={nestingLevel}
                 key={listItem.id}
                 href={listItem.href}
