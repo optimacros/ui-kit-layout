@@ -21,7 +21,7 @@ type Story = StoryObj<typeof HeaderNavigation>
 
 const Wrapper = ({ children }: {children: ReactNode}) => {
     return (
-        <div style={{ backgroundColor: 'var(--primary-color)', width: 'fit-content' }}>
+        <div style={{ backgroundColor: 'var(--primary-color)', width: 'fit-content', color: '#fff' }}>
             {children}
         </div>
     )
