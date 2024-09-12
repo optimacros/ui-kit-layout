@@ -21,7 +21,7 @@ type Story = StoryObj<typeof HeaderMenu>
 
 const Wrapper = ({ children }: {children: ReactNode}) => {
     return (
-        <div style={{ backgroundColor: 'var(--primary-color)' }}>
+        <div style={{ backgroundColor: 'var(--primary-color)', width: 'fit-content' }}>
             {children}
         </div>
     )
