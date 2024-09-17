@@ -66,15 +66,3 @@ export const Unread:Story = {
         (story) => <Wrapper>{story()}</Wrapper>,
     ],
 }
-
-export const Invisible:Story = {
-    args: {
-        notification: {
-            ...notification,
-            visible: false,
-        },
-    },
-    decorators: [
-        (story) => <Wrapper>{story()}</Wrapper>,
-    ],
-}
