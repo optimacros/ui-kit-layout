@@ -1,5 +1,4 @@
 import react from '@vitejs/plugin-react-swc'
-import crypto from 'crypto'
 import { glob } from 'glob'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -31,19 +30,12 @@ export default defineConfig({
     css: {
         modules: {
             localsConvention: 'camelCase',
-            generateScopedName: (name, filename, css) => {
+            generateScopedName: (name, filename) => {
                 const componentName = filename
                     .split('/')
                     .pop()
 
-                const hash = crypto
-                    .createHash('md5')
-                    .update(css)
-                    .digest('base64')
-                    .replace(/[^\d\w]+/g, '')
-                    .substring(0, 5)
-
-                return `${componentName?.replace('.module.css', '-module')}__${name}__${hash}`
+                return `${componentName?.replace('.module.css', '-module')}__${name}`
             },
         },
         postcss: {
@@ -71,24 +63,44 @@ export default defineConfig({
         },
         rollupOptions: {
             external: ['react', 'react-dom', 'react/jsx-runtime'],
-            input: Object.fromEntries(
-                glob.sync(
-                    './src/**/*.{ts,tsx}',
-                ).map(file => [
-                    // The name of the entry point
-                    // src/components/nested/foo.ts becomes nested/foo
-                    path.relative(
-                        'src',
-                        file.slice(0, file.length - path.extname(file).length),
+            input: {
+                ...(Object.fromEntries(
+                    glob.sync(
+                        './src/**/*.{ts,tsx}',
+                    ).map(file => [
+                        // The name of the entry point
+                        // src/components/nested/foo.ts becomes nested/foo
+                        path.relative(
+                            'src',
+                            file.slice(0, file.length - path.extname(file).length),
+                        ),
+                        // The absolute path to the entry file
+                        // src/components/nested/foo.ts becomes /project/src/components/nested/foo.ts
+                        fileURLToPath(new URL(file, import.meta.url)),
+                    ]),
+                )),
+                ...(Object.fromEntries(
+                    glob.sync(
+                        './src/fonts/*.css',
+                    ).map(file => [
+                        path.relative(
+                            'src',
+                            file.slice(0, file.length - path.extname(file).length),
+                        ),
+                        fileURLToPath(new URL(file, import.meta.url)),
+                    ],
                     ),
-                    // The absolute path to the entry file
-                    // src/components/nested/foo.ts becomes /project/src/components/nested/foo.ts
-                    fileURLToPath(new URL(file, import.meta.url)),
-                ]),
-            ),
+                )),
+            },
             output: {
                 chunkFileNames: 'helpers/[name].js',
-                assetFileNames: 'assets/index[extname]',
+                assetFileNames: (assetInfo) => {
+                    if (assetInfo.name && assetInfo.name.includes('fonts.css')) {
+                        return '[name][extname]'
+                    }
+
+                    return 'assets/index[extname]'
+                },
                 entryFileNames: '[name].js',
                 dir: 'dist',
                 globals: {
