@@ -20,7 +20,7 @@ type Story = StoryObj<typeof HeaderNotification>
 
 const Wrapper = ({ children }: {children: ReactNode}) => {
     return (
-        <div style={{ backgroundColor: 'var(--primary-color)', width: 'fit-content' }}>
+        <div style={{ backgroundColor: 'var(--primary-color)', paddingLeft: '3px', width: 'fit-content' }}>
             {children}
         </div>
     )
