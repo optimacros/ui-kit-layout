@@ -1,6 +1,6 @@
 import { Preview } from '@storybook/react'
 
-import '../src/themes/appBaseTheme.css';
+import '../src/styles/DefaultColorTheme.css';
 
 import '../src/styles/colors.css'
 import '../src/styles/variables.css'
