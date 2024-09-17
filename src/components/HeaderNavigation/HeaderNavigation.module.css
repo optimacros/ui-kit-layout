@@ -40,7 +40,7 @@
         justify-content: center;
 
         font-size: 24px;
-        color: #fff;
+        color: var(--nav-accent-color);
 
         & img {
             max-width: 15px;
