@@ -5,18 +5,23 @@ import { ToggleIcon } from './ToggleIcon'
 
 const meta: Meta<typeof ToggleIcon> = {
     component: ToggleIcon,
+    title: 'UI Kit layout/ToggleIcon',
     argTypes: {
         isOpen: {
             description: 'Start status',
+            control: 'boolean',
         },
         wrapperClassName: {
             description: 'Custom styles for wrapper',
+            control: 'object',
         },
         iconClassName: {
             description: 'Custom styles for icon',
+            control: 'object',
         },
         handleClick: {
             description: 'Click handler',
+            control: 'object',
         },
     },
 }

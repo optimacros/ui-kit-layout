@@ -7,9 +7,11 @@ import iconUser from 'icons/icon-user.svg'
 
 const meta: Meta<typeof HeaderUserMenu> = {
     component: HeaderUserMenu,
+    title: 'UI Kit layout/HeaderUserMenu',
     argTypes: {
         notification: {
             description: 'Notification info',
+            control: 'object',
         },
     },
 }

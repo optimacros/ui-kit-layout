@@ -5,11 +5,7 @@ import { Header } from './Header'
 
 const meta: Meta<typeof Header> = {
     component: Header,
-    argTypes: {
-        children: {
-            description: 'Place for header elements',
-        },
-    },
+    title: 'UI Kit layout/Header',
 }
 
 export default meta

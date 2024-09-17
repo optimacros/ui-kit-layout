@@ -5,12 +5,15 @@ import { HeaderNavigation } from './HeaderNavigation'
 
 const meta: Meta<typeof HeaderNavigation> = {
     component: HeaderNavigation,
+    title: 'UI Kit layout/HeaderNavigation',
     argTypes: {
         title: {
             description: 'Header title',
+            control: 'text',
         },
         onClick: {
             description: 'Action on click',
+            control: 'object',
         },
     },
 }

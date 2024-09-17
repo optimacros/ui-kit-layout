@@ -8,12 +8,15 @@ import iconWorkspace from 'icons/icon-workspace.svg'
 
 const meta: Meta<typeof Sidebar> = {
     component: Sidebar,
+    title: 'UI Kit layout/Sidebar',
     argTypes: {
         folders: {
             description: 'Root sidebar list elements',
+            control: 'object',
         },
         content: {
             description: 'Child sidebar list elements',
+            control: 'object',
         },
     },
 }

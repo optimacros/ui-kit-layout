@@ -4,9 +4,11 @@ import { Footer } from './Footer'
 
 const meta: Meta<typeof Footer> = {
     component: Footer,
+    title: 'UI Kit layout/Footer',
     argTypes: {
         appVersion: {
             description: 'Specify App version',
+            control: 'text',
         },
     },
 }

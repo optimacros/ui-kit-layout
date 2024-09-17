@@ -5,12 +5,15 @@ import { HeaderMenu } from './HeaderMenu'
 
 const meta: Meta<typeof HeaderMenu> = {
     component: HeaderMenu,
+    title: 'UI Kit layout/HeaderMenu',
     argTypes: {
         elements: {
             description: 'Header menu element list',
+            control: 'object',
         },
         className: {
             description: 'Custom styles',
+            control: 'object',
         },
     },
 }

@@ -5,9 +5,11 @@ import { HeaderNotification } from './HeaderNotification'
 
 const meta: Meta<typeof HeaderNotification> = {
     component: HeaderNotification,
+    title: 'UI Kit layout/HeaderNotification',
     argTypes: {
         notification: {
             description: 'Notification info',
+            control: 'object',
         },
     },
 }

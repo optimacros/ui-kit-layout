@@ -7,9 +7,11 @@ import { getSidebarData } from 'utils'
 
 const meta: Meta<typeof SidebarList> = {
     component: SidebarList,
+    title: 'UI Kit layout/SidebarList',
     argTypes: {
         listData: {
             description: 'List elements',
+            control: 'object',
         },
     },
 }
