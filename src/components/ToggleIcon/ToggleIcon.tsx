@@ -9,7 +9,7 @@ import styles from './ToggleIcon.module.css'
 
 export interface ToggleIconProps {
     isOpen?: boolean;
-    handleClick?: (() => void) | undefined;
+    handleClick?: (() => void);
     wrapperClassName?: string;
     iconClassName?: string;
 }

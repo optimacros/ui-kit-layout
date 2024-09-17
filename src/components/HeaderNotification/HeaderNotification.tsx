@@ -30,6 +30,7 @@ export const HeaderNotification: FC<HeaderNotificationProps> = (props) => {
             onClick={notification.toggle}
         >
             <HeaderNotificationBadge notificationUnreadCount={notification.unreadCount} />
+
             <div className={styles.NotificationIcon}>
                 <ReactSVG src={iconBell}/>
             </div>
