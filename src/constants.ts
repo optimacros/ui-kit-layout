@@ -110,7 +110,7 @@ export const userElements = [
 ]
 
 export const notification = {
-    unreadCount: 0,
+    unreadCount: 3,
     active: false,
     visible: true,
     // eslint-disable-next-line no-console

@@ -11,6 +11,7 @@
     height: 12px;
     border-radius: 50%;
     z-index: 1;
+    color: var(--notification-badge-color);
     background-color: var(--notification-badge-background);
     right: 0;
     top: 0;
