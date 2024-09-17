@@ -42,7 +42,8 @@ export const ToggleIcon: FC<ToggleIconProps> = (props) => {
             onClick={handleClick}
             title={title}
         >
-            <ReactSVG className={iconClassNameFinal}
+            <ReactSVG
+                className={iconClassNameFinal}
                 src={iconValue}
             />
         </div>

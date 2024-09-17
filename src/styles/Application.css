@@ -1,45 +1,4 @@
 /* -------------------------------------------------- */
-/* Material Design Icons */
-/* -------------------------------------------------- */
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
-    src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url('./fonts/MaterialIcons-Regular.woff2') format('woff2'),
-    url('./fonts/MaterialIcons-Regular.woff') format('woff'),
-    url('./fonts/MaterialIcons-Regular.ttf') format('truetype');
-}
-
-.material-icons {
-    font-size: 24px;
-    line-height: 1;
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    vertical-align: middle;
-
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-}
-
-/* -------------------------------------------------- */
 /* Basic Style */
 /* -------------------------------------------------- */
 *,
@@ -92,13 +51,26 @@ body {
     font-size: 1.2rem;
 }
 
-h1, h2, h3, h4, h5, h6, label, p, button, abbr, a, span, small {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p,
+button,
+abbr,
+a,
+span,
+small {
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: 100%;
 }
 
-input:not([type="checkbox"]):not([type="radio"]), button {
+input:not([type="checkbox"]):not([type="radio"]),
+button {
     outline: none;
     appearance: none;
     -webkit-touch-callout: none;
@@ -109,7 +81,8 @@ input[required]:-moz-ui-invalid {
     box-shadow: none;
 }
 
-input:not([type="file"]), textarea {
+input:not([type="file"]),
+textarea {
     background: var(--input-bg);
     color: var(--input-color);
     caret-color: var(--caret-color);
@@ -121,13 +94,13 @@ input:not([type="file"]), textarea {
     background: none;
 }
 
-input[type=number] {
+input[type="number"] {
     -moz-appearance: auto !important;
     appearance: auto !important;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: inner-spin-button !important;
 }
 
@@ -146,7 +119,7 @@ input[type="checkbox"] {
         ~ [data-react-toolbox="check"] {
             &:before {
                 background-color: var(--accent-color) !important;
-                opacity: 0.20;
+                opacity: 0.2;
             }
         }
     }
@@ -156,7 +129,7 @@ input[type="radio"] {
     &:focus {
         ~ [data-react-toolbox="radio"] {
             &:after {
-                content: '';
+                content: "";
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -164,7 +137,7 @@ input[type="radio"] {
                 height: 100%;
                 box-shadow: 0 0 0 12px var(--accent-color);
                 border-radius: 50%;
-                opacity: .2;
+                opacity: 0.2;
             }
         }
     }
@@ -177,7 +150,7 @@ p {
 }
 
 a {
-    color: #03A9F4;
+    color: #03a9f4;
     text-decoration: underline;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
@@ -231,7 +204,7 @@ textarea {
 /* -------------------------------------------------- */
 .clearfix {
     &:after {
-        content: '';
+        content: "";
         display: table;
         clear: both;
     }
