@@ -19,6 +19,7 @@ export class HeaderUserMenu extends Component<HeaderUserMenuProps> {
         return (
             <div className={styles.User}>
                 <HeaderNotification notification={notification} />
+
                 <HeaderMenu elements={elements} />
             </div>
         )

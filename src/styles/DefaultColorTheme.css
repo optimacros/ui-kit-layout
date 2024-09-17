@@ -261,6 +261,10 @@
     --ListElements-element-disabled-bg: #f7f7f7;
     --ListElements-element-static-bg: #ffffff;
 
+    /* Notification */
+    --notification-badge-background: #d0695b;
+    --notification-badge-color: #ffffff;
+
     /* FormulaEditor */
     --MarkCommentFunc-color: #0000ff;
     --MarkCommentValue-color: #008000;

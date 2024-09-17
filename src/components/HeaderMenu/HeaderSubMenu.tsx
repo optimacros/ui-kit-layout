@@ -13,7 +13,7 @@ export interface HeaderSubMenuProps {
     firstLevel?: boolean;
     rootElementNode: RefObject<HTMLLIElement>;
     element: MenuElement;
-    elements: MenuElement[] | undefined;
+    elements?: MenuElement[];
 }
 
 export class HeaderSubMenu extends Component<HeaderSubMenuProps> {

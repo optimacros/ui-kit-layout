@@ -9,7 +9,7 @@ import styles from './ToggleIcon.module.css'
 
 export interface ToggleIconProps {
     isOpen?: boolean;
-    handleClick?: (() => void) | undefined;
+    handleClick?: (() => void);
     wrapperClassName?: string;
     iconClassName?: string;
 }
@@ -42,7 +42,8 @@ export const ToggleIcon: FC<ToggleIconProps> = (props) => {
             onClick={handleClick}
             title={title}
         >
-            <ReactSVG className={iconClassNameFinal}
+            <ReactSVG
+                className={iconClassNameFinal}
                 src={iconValue}
             />
         </div>
