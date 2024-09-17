@@ -244,7 +244,9 @@ const App = () => {
                     <main className={style.Main}>
                         <h1>MAIN CONTENT</h1>
                     </main>
-                    <Footer appVersion="1.0.0" />
+                    <Footer appVersion="1.0.0">
+                        &#xa9;Copyright Optimacros 2018 - {new Date().getFullYear()}
+                    </Footer>
                 </div>
                 <div className={style.SidebarWrapper}>
                     <Sidebar
