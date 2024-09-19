@@ -1,4 +1,4 @@
-import { Component, JSX } from 'react'
+import { FC } from 'react'
 import { Icon } from 'ui-kit-core'
 
 import styles from './HeaderNavigation.module.css'
@@ -8,28 +8,28 @@ export interface HeaderNavigationProps {
     onClick: () => void;
 }
 
-export class HeaderNavigation extends Component<HeaderNavigationProps> {
-    render(): JSX.Element {
-        return (
-            <div
-                role="none"
-                className={styles.Container}
-                onClick={this.props.onClick}
-                title={this.props.title}
-            >
-                <div className={styles.Element}>
-                    <div className={styles.Element_IconContainer}>
-                        <Icon
-                            className={styles.Element_Icon}
-                            value="menu"
-                        />
-                    </div>
+export const HeaderNavigation: FC<HeaderNavigationProps> = (props) => {
+    const { title, onClick } = props
 
-                    <div className={styles.Element_Title}>
-                        {this.props.title}
-                    </div>
+    return (
+        <div
+            role="none"
+            className={styles.Container}
+            onClick={onClick}
+            title={title}
+        >
+            <div className={styles.Element}>
+                <div className={styles.Element_IconContainer}>
+                    <Icon
+                        className={styles.Element_Icon}
+                        value="menu"
+                    />
+                </div>
+
+                <div className={styles.Element_Title}>
+                    {title}
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }

@@ -1,4 +1,4 @@
-import { Component, JSX } from 'react'
+import { FC } from 'react'
 
 import { HeaderMenu } from '../HeaderMenu'
 import { HeaderNotification } from '../HeaderNotification'
@@ -12,16 +12,14 @@ export interface HeaderUserMenuProps {
     notification: Notification;
 }
 
-export class HeaderUserMenu extends Component<HeaderUserMenuProps> {
-    render(): JSX.Element {
-        const { elements, notification } = this.props
+export const HeaderUserMenu: FC<HeaderUserMenuProps> = (props) => {
+    const { elements, notification } = props
 
-        return (
-            <div className={styles.User}>
-                <HeaderNotification notification={notification} />
+    return (
+        <div className={styles.User}>
+            <HeaderNotification notification={notification} />
 
-                <HeaderMenu elements={elements} />
-            </div>
-        )
-    }
+            <HeaderMenu elements={elements} />
+        </div>
+    )
 }
