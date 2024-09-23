@@ -1,0 +1,13 @@
+.Footer {
+    display: flex;
+    align-items: center;
+    padding: 4px 12px 5px;
+    color: var(--mainTabs-footer-color);
+    background-color: var(--mainTabs-footer-bg);
+    font-size: 10px;
+}
+
+.Version {
+    font-weight: 700;
+    padding-right: 5px;
+}

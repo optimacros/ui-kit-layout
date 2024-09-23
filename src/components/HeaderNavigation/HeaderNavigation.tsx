@@ -1,18 +1,22 @@
-import { Icon } from '../'
+import type { FC } from 'react'
+import { Icon } from 'ui-kit-core'
 
 import styles from './HeaderNavigation.module.css'
 
-interface Props {
+export interface HeaderNavigationProps {
+    title: string;
     onClick: () => void;
-    title?: string;
 }
 
-export const HeaderNavigation = (props: Props) => {
+export const HeaderNavigation: FC<HeaderNavigationProps> = (props) => {
+    const { title, onClick } = props
+
     return (
         <div
+            role="none"
             className={styles.Container}
-            onClick={props.onClick}
-            title={props.title}
+            onClick={onClick}
+            title={title}
         >
             <div className={styles.Element}>
                 <div className={styles.Element_IconContainer}>
@@ -22,7 +26,9 @@ export const HeaderNavigation = (props: Props) => {
                     />
                 </div>
 
-                <div className={styles.Element_Title}>{props.title}</div>
+                <div className={styles.Element_Title}>
+                    {title}
+                </div>
             </div>
         </div>
     )

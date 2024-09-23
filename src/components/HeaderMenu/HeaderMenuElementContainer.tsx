@@ -1,83 +1,69 @@
-import React from 'react'
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
-import { observer } from 'mobx-react'
+import type { FC } from 'react'
+import { ReactSVG } from 'react-svg'
+import { Icon } from 'ui-kit-core'
 
-import type { Element } from './HeaderMenuElement'
-import { Icon } from '../'
+import type { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 
-type Props = {
-    element: Element;
+export interface HeaderMenuElementContainerProps {
+    element: MenuElement;
     isFirstLevel?: boolean;
 }
 
-@observer
-export class HeaderMenuElementContainer extends React.Component<Props> {
-    render(): JSX.Element {
-        const { element } = this.props
+export const HeaderMenuElementContainer: FC<HeaderMenuElementContainerProps> = (props) => {
+    const { element, isFirstLevel } = props
 
-        const className = classNames({
-            [styles.Element]: true,
-            [styles.Element_withIcon]: !!element.icon,
-            [styles.ElementContainer]: true,
-        })
-
-        return (
-            <div
-                role="none"
-                className={className}
-                onClick={this.onClick}
-            >
-                {this.renderIcon(element)}
-
-                <div className={styles.Element_Title}>
-                    {element.title}
-                </div>
-
-                {this.renderArrowIcon()}
-            </div>
-        )
-    }
-
-    renderIcon(element: Element): JSX.Element | null {
-        if (!element.icon) {
-            return null
-        }
-
-        return (
-            <div className={styles.Element_IconContainer}>
-                <Icon
-                    className={styles.Element_Icon}
-                    value={element.icon}
-                />
-            </div>
-        )
-    }
-
-    renderArrowIcon(): JSX.Element | null {
-        const { element, isFirstLevel } = this.props
-
-        if (isFirstLevel || isEmpty(element.children) || element.disabled) {
-            return null
-        }
-
-        return (
-            <div>
-                <Icon
-                    className={styles.Element_Arrow}
-                    value="navigate_next"
-                />
-            </div>
-        )
-    }
-
-    private onClick = (): void => {
-        const { element } = this.props
-
+    const onClick = (): void => {
         if (!element.disabled && element.open) {
             element.open()
         }
     }
+
+    const className = classNames({
+        [styles.Element]: true,
+        [styles.Element_withIcon]: !!element.icon,
+        [styles.ElementContainer]: true,
+    })
+
+    return (
+        <div
+            role="none"
+            className={className}
+            onClick={onClick}
+        >
+            {(!element.icon)
+                ? null
+                : (
+                    <div className={styles.Element_IconContainer}>
+                        {element.icon.includes('.svg')
+                            ? <ReactSVG src={element.icon} />
+                            : (
+                                <Icon
+                                    className={styles.Element_Icon}
+                                    value={element.icon}
+                                />
+                            )
+                        }
+                    </div>
+                )}
+
+            <div className={styles.Element_Title}>
+                {element.title}
+            </div>
+
+            {(isFirstLevel || isEmpty(element.children) || element.disabled)
+                ? null
+                : (
+                    <div>
+                        <Icon
+                            className={styles.Element_Arrow}
+                            value="navigate_next"
+                        />
+                    </div>
+                )}
+        </div>
+    )
 }

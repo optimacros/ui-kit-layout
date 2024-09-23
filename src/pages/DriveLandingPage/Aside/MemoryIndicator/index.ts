@@ -1,1 +1,0 @@
-export { MemoryIndicator } from './MemoryIndicator'

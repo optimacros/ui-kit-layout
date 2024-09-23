@@ -1,12 +1,6 @@
-import { Router } from './pages/Router'
-
-import styles from './styles/Workspace.module.css'
-
-function App() {
+const App = () => {
     return (
-        <div className={styles.Wrapper}>
-            <Router />
-        </div>
+        <div />
     )
 }
 

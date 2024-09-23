@@ -3,14 +3,12 @@
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
-    margin-right: 16px;
-    margin-left: -8px;
     max-width: 250px;
     height: 100%;
     position: relative;
 
     &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0;
@@ -26,7 +24,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 17px 0 9px;
+    padding: 0 12px 0 15px;
     font-size: 1.3rem;
     cursor: pointer;
 

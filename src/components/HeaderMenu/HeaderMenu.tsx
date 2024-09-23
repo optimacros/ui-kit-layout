@@ -1,34 +1,31 @@
-import React from 'react'
+import classNames from 'classnames'
 import { isEmpty, map } from 'lodash'
-import { observer } from 'mobx-react'
+import type { FC, JSX } from 'react'
 
-import type { Element } from './HeaderMenuElement'
 import { HeaderMenuElement } from './HeaderMenuElement'
+import type { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 
-type Props = {
-    elements: Element[];
+export interface HeaderMenuProps {
+    elements: MenuElement[];
+    className?: string;
 }
 
-@observer
-export class HeaderMenu extends React.Component<Props> {
-    render(): JSX.Element | null {
-        if (isEmpty(this.props.elements)) {
-            return null
-        }
+export const HeaderMenu: FC<HeaderMenuProps> = (props) => {
+    const { elements, className } = props
 
-        return (
-            <div className={styles.Container}>
-                <ul className={styles.Menu}>
-                    {this.renderList()}
-                </ul>
-            </div>
-        )
+    if (isEmpty(elements)) {
+        return null
     }
 
-    renderList(): (JSX.Element | null)[] {
-        return map(this.props.elements, (element) => {
+    const finalClassName = classNames(
+        styles.Container,
+        className,
+    )
+
+    const renderList = (): (JSX.Element | null)[] => {
+        return map(elements, (element) => {
             if (element.hidden) {
                 return null
             }
@@ -42,4 +39,12 @@ export class HeaderMenu extends React.Component<Props> {
             )
         })
     }
+
+    return (
+        <div className={finalClassName}>
+            <ul className={styles.Menu}>
+                {renderList()}
+            </ul>
+        </div>
+    )
 }

@@ -1,38 +1,25 @@
-import React from 'react'
+import type { FC } from 'react'
+
+import { HeaderMenu } from '../HeaderMenu'
+import { HeaderNotification } from '../HeaderNotification'
+import type { MenuElement } from 'components/HeaderMenu/type'
+import type { Notification } from 'components/HeaderNotification/type'
 
 import styles from './HeaderUserMenu.module.css'
 
-interface Props {
-    userName: string;
+export interface HeaderUserMenuProps {
+    elements: MenuElement[];
+    notification: Notification;
 }
 
-export class HeaderUserMenu extends React.Component<React.PropsWithChildren<Props>> {
-    render() {
-        return (
-            <div className={styles.headerNav}>
-                <ul className={styles.headerNav_List}>
-                    <li className={styles.headerNav_Item}>
-                        {this.renderDropDown()}
-                    </li>
-                </ul>
-            </div>
-        )
-    }
+export const HeaderUserMenu: FC<HeaderUserMenuProps> = (props) => {
+    const { elements, notification } = props
 
-    renderDropDown() {
-        return (
-            <div className={styles.userMenu}>
-                <div className={styles.userMenu_Title}>{this.props.userName || ' '}</div>
-                <div className={styles.userMenu_List}>
-                    <ul>
-                        <li className={styles.userMenu_Name}>
-                            <span>{this.props.userName || ' '}</span>
-                        </li>
+    return (
+        <div className={styles.User}>
+            <HeaderNotification notification={notification} />
 
-                        {this.props.children}
-                    </ul>
-                </div>
-            </div>
-        )
-    }
+            <HeaderMenu elements={elements} />
+        </div>
+    )
 }
