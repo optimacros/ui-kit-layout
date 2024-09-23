@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { ReactNode, useState } from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
+import type { ReactNode } from 'react'
+import { useState } from 'react'
 
 import { ToggleIcon } from './ToggleIcon'
 

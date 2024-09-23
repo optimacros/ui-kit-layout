@@ -1,9 +1,9 @@
 import classNames from 'classnames'
-import { FC } from 'react'
+import type { FC } from 'react'
 import { ReactSVG } from 'react-svg'
 
 import { HeaderNotificationBadge } from './HeaderNotificationBadge'
-import { Notification } from './type'
+import type { Notification } from './type'
 import iconBell from 'icons/icon-bell.svg'
 
 import styles from './HeaderNotification.module.css'

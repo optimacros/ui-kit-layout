@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { ReactNode } from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
+import type { ReactNode } from 'react'
 
 import { SidebarList } from './SidebarList'
 import * as SidebarStories from '../Sidebar/Sidebar.stories'

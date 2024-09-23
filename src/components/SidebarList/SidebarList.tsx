@@ -1,8 +1,8 @@
-import { FC, JSX } from 'react'
+import type { FC, JSX } from 'react'
 
 import { SidebarListItem as SidebarListItemComponent } from './SidebarListItem'
 import { SidebarSubList } from './SidebarSubList'
-import { SidebarListItem } from './type'
+import type { SidebarListItem } from './type'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconFolderOpen from 'icons/icon-folder-open.svg'
 

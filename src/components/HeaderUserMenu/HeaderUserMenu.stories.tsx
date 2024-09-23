@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { ReactNode } from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
+import type { ReactNode } from 'react'
 
 import { HeaderUserMenu } from './HeaderUserMenu'
 import * as HeaderNotificationStories from '../HeaderNotification/HeaderNotification.stories'

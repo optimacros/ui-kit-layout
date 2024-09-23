@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import { Sidebar } from './Sidebar'
-import { SidebarListItem } from 'components/SidebarList'
+import type { SidebarListItem } from 'components/SidebarList'
 import iconApp from 'icons/icon-app.svg'
 import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconWorkspace from 'icons/icon-workspace.svg'

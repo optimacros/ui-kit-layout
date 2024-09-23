@@ -1,10 +1,11 @@
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
-import { FC, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
+import type { FC } from 'react'
 
 import { HeaderMenuElementContainer } from './HeaderMenuElementContainer'
 import { HeaderSubMenu } from './HeaderSubMenu'
-import { MenuElement } from './type'
+import type { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 
@@ -13,14 +14,8 @@ export interface HeaderMenuElementProps {
     firstLevel?: boolean;
 }
 
-type State = {
-    showMenu: boolean;
-}
-
 export const HeaderMenuElement: FC<HeaderMenuElementProps> = (props) => {
-    const [state, setState] = useState<State>({
-        showMenu: false,
-    })
+    const [showMenu, setShowMenu] = useState(false)
     const node = useRef<HTMLLIElement>(null)
 
     const { element, firstLevel } = props
@@ -30,15 +25,11 @@ export const HeaderMenuElement: FC<HeaderMenuElementProps> = (props) => {
     }
 
     const onMouseEnter = (): void => {
-        setState({
-            showMenu: true,
-        })
+        setShowMenu(true)
     }
 
     const onMouseLeave = (): void => {
-        setState({
-            showMenu: false,
-        })
+        setShowMenu(false)
     }
 
     const className = classNames({
@@ -61,7 +52,7 @@ export const HeaderMenuElement: FC<HeaderMenuElementProps> = (props) => {
                 isFirstLevel={firstLevel}
             />
 
-            {(!state.showMenu || isEmpty(element.children))
+            {(!showMenu || isEmpty(element.children))
                 ? null
                 : (
                     <HeaderSubMenu

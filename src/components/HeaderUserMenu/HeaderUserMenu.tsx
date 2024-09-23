@@ -1,9 +1,9 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 
 import { HeaderMenu } from '../HeaderMenu'
 import { HeaderNotification } from '../HeaderNotification'
-import { MenuElement } from 'components/HeaderMenu/type'
-import { Notification } from 'components/HeaderNotification/type'
+import type { MenuElement } from 'components/HeaderMenu/type'
+import type { Notification } from 'components/HeaderNotification/type'
 
 import styles from './HeaderUserMenu.module.css'
 

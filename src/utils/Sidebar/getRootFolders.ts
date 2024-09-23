@@ -1,4 +1,4 @@
-import { SidebarListItem } from 'components/SidebarList/type'
+import type { SidebarListItem } from 'components/SidebarList/type'
 
 export function getRootFolders(
     folders: SidebarListItem[],

@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { FC } from 'react'
+import type { FC } from 'react'
 import { ReactSVG } from 'react-svg'
 
 import iconArrowRight from 'icons/icon-arrow-right.svg'

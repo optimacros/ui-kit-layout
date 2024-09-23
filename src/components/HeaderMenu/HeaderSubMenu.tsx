@@ -1,8 +1,9 @@
 import { isEmpty } from 'lodash'
-import { RefObject, FC, useEffect, useRef } from 'react'
+import type { RefObject, FC } from 'react'
+import { useEffect, useRef } from 'react'
 
 import { HeaderMenuElement } from './HeaderMenuElement'
-import { MenuElement } from './type'
+import type { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 

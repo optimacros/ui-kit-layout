@@ -1,9 +1,9 @@
 import classNames from 'classnames'
 import { isEmpty, map } from 'lodash'
-import { FC, JSX } from 'react'
+import type { FC, JSX } from 'react'
 
 import { HeaderMenuElement } from './HeaderMenuElement'
-import { MenuElement } from './type'
+import type { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 

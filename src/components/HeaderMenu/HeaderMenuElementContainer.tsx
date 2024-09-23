@@ -1,10 +1,10 @@
 import classNames from 'classnames'
 import { isEmpty } from 'lodash'
-import { FC } from 'react'
+import type { FC } from 'react'
 import { ReactSVG } from 'react-svg'
 import { Icon } from 'ui-kit-core'
 
-import { MenuElement } from './type'
+import type { MenuElement } from './type'
 
 import styles from './HeaderMenu.module.css'
 

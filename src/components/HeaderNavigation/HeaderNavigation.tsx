@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 import { Icon } from 'ui-kit-core'
 
 import styles from './HeaderNavigation.module.css'

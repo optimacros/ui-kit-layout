@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 
 import { SidebarList } from 'components/SidebarList'
-import { SidebarListItem } from 'components/SidebarList/type'
+import type { SidebarListItem } from 'components/SidebarList/type'
 import { getSidebarData } from 'utils/Sidebar/getSidebarData'
 
 import styles from './Sidebar.module.css'
