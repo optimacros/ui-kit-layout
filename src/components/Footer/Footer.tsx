@@ -10,7 +10,10 @@ export interface FooterProps {
 export const Footer: FC<FooterProps> = (props) => {
     return (
         <footer className={styles.Footer}>
-            <span className={styles.Version}>{props.appVersion}</span>
+            <span className={styles.Version}>
+                {props.appVersion}
+            </span>
+
             {props.children}
         </footer>
     )
