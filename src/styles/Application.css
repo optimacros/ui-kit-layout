@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow-y: auto;
+}
+
 html,
 body,
 #app {
@@ -14,8 +22,6 @@ body,
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-
     background-color: var(--body-bg);
     color: var(--primary-text-color);
 
