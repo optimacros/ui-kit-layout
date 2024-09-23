@@ -10,7 +10,7 @@
 }
 
 .NotificationIcon {
-    > div {
+    div {
         display: flex;
         align-items: center;
     }
