@@ -38,10 +38,11 @@ export const HeaderMenuElementContainer: FC<HeaderMenuElementContainerProps> = (
                 ? null
                 : (
                     <div className={styles.Element_IconContainer}>
-                        {element.icon.includes('.svg')
+                        {element.icon.includes('.svg') || element.icon.includes('data:image/svg')
                             ? (
-                                <ReactSVG src={element.icon}
+                                <ReactSVG
                                     className={styles.Element_Icon}
+                                    src={element.icon}
                                 />
                             )
                             : (
