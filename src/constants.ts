@@ -1,8 +1,4 @@
-import { SidebarListItem } from 'components/SidebarList/type'
-import iconApp from 'icons/icon-app.svg'
-import iconFolderClose from 'icons/icon-folder-close.svg'
 import iconUser from 'icons/icon-user.svg'
-import iconWorkspace from 'icons/icon-workspace.svg'
 
 export const KEY_CODES = {
     SPACE: 32,
@@ -16,7 +12,7 @@ export const KEY_CODES = {
 
 export const elements = [
     {
-        id: '1',
+        id: '1231',
         icon: 'list',
         title: 'AM Landing (Applications)',
         disabled: false,
@@ -24,38 +20,38 @@ export const elements = [
         open: () => console.log('click'),
     },
     {
-        id: '2',
+        id: '2312313',
         title: 'Tasks manager',
         disabled: false,
         // eslint-disable-next-line no-console
         open: () => console.log('click'),
     },
     {
-        id: '3',
+        id: '34324',
         title: 'Task output',
         disabled: false,
         // eslint-disable-next-line no-console
         open: () => console.log('click'),
     },
     {
-        id: '4',
+        id: '41312321',
         title: 'General parameters',
         disabled: false,
         // eslint-disable-next-line no-console
         open: () => console.log('click'),
     },
     {
-        id: '5',
+        id: '342342345',
         title: 'Security Center',
         disabled: true,
     },
     {
-        id: '6',
+        id: '4242346',
         title: 'Help',
         disabled: false,
         children: [
             {
-                id: '7',
+                id: '7432432432',
                 icon: 'help_outline',
                 title: 'App Version',
                 disabled: false,
@@ -118,107 +114,119 @@ export const notification = {
 }
 
 // Sidebar mock
-
-export const foldersMock: SidebarListItem[] = [
+// todo export Этого всего добра
+export const foldersMock = [
     {
-        folderId: null,
-        type: 'folder',
-        name: 'Folder 1',
-        id: 1,
-        icon: iconFolderClose,
+        rootId: null,
+        type: 'Folder',
+        label: 'Folder 1',
+        id: 123423,
+        icon: 'Folder',
+        onClick: () => console.log('Click Folder 1'),
     },
     {
-        folderId: null,
-        type: 'folder',
-        name: 'Folder 2',
-        id: 2,
-        icon: iconFolderClose,
-
-    },
-    {
-        folderId: 1,
-        type: 'folder',
-        name: 'Folder 3',
-        id: 3,
-        icon: iconFolderClose,
+        rootId: null,
+        type: 'Folder',
+        label: 'Folder 2',
+        id: 42432,
+        icon: 'Folder',
+        onClick: () => console.log('Click Folder 2'),
 
     },
     {
-        folderId: null,
-        type: 'folder',
-        name: 'Folder 4',
-        id: 4,
-        icon: iconFolderClose,
+        rootId: 123423,
+        type: 'Folder',
+        label: 'Folder 3',
+        id: 3432324,
+        icon: 'Folder',
+        onClick: () => console.log('Click Folder 3'),
 
+    },
+    {
+        rootId: null,
+        type: 'Folder',
+        label: 'Folder 4',
+        id: 43232324,
+        icon: 'Folder',
+        onClick: () => console.log('Click Folder 4'),
     },
 ]
 
-export const workspacesMock: SidebarListItem[] = [
+export const workspacesMock = [
     {
-        folderId: 1,
-        type: 'workspace',
-        name: 'Workspace 1',
-        id: 1,
+        rootId: 123423,
+        type: 'Workspace',
+        label: 'Workspace 1',
+        id: 1432423432,
         href: '#',
-        icon: iconWorkspace,
+        icon: 'Workspace',
+        onClick: () => console.log('Click Workspace 1'),
     },
     {
-        folderId: 2,
-        type: 'workspace',
-        name: 'Workspace 2',
-        id: 2,
+        rootId: 42432,
+        type: 'Workspace',
+        label: 'Workspace 2',
+        id: 24324323,
         href: '#',
-        icon: iconWorkspace,
+        icon: 'Workspace',
+        onClick: () => console.log('Click Workspace 2'),
     },
     {
-        folderId: null,
-        type: 'workspace',
-        name: 'Workspace 3',
-        id: 3,
+        rootId: null,
+        type: 'Workspace',
+        label: 'Workspace 3',
+        id: 3434234242423,
         href: '#',
-        icon: iconWorkspace,
-        adminUrl: '123/213',
+        icon: 'Workspace',
+        settingHref: '#',
+        onClick: () => console.log('Click Workspace 3'),
+        settingOnClick: () => console.log('Setting Click'),
     },
     {
-        folderId: 3,
-        type: 'workspace',
-        name: 'Workspace 4',
-        id: 4,
+        rootId: 42432,
+        type: 'Workspace',
+        label: 'Workspace 4',
+        id: 375635352,
         href: '#',
-        icon: iconWorkspace,
+        icon: 'Workspace',
+        onClick: () => console.log('Click Workspace 4'),
     },
 ]
-export const appManagersMock: SidebarListItem[] = [
+export const appManagersMock = [
     {
-        folderId: 1,
-        type: 'appManager',
-        name: 'AM 1',
-        id: 1,
+        rootId: 123423,
+        type: 'AM',
+        label: 'AM 1',
+        id: 1132335,
         href: '#',
-        icon: iconApp,
+        icon: 'AM',
+        onClick: () => console.log('Click AM 1'),
     },
     {
-        folderId: 2,
-        type: 'appManager',
-        name: 'AM 2',
-        id: 3,
+        rootId: 42432,
+        type: 'AM',
+        label: 'AM 2',
+        id: 3122432325,
         href: '#',
-        icon: iconApp,
+        icon: 'AM',
+        onClick: () => console.log('Click AM 2'),
     },
     {
-        folderId: 3,
-        type: 'appManager',
-        name: 'AM 3',
-        id: 3,
+        rootId: 3432324,
+        type: 'AM',
+        label: 'AM 3',
+        id: 3533653,
         href: '#',
-        icon: iconApp,
+        icon: 'AM',
+        onClick: () => console.log('Click AM 3'),
     },
     {
-        folderId: null,
-        type: 'appManager',
-        name: 'AM 4',
-        id: 4,
+        rootId: null,
+        type: 'AM',
+        label: 'AM 4',
+        id: 41242432,
         href: '#',
-        icon: iconApp,
+        icon: 'AM',
+        onClick: () => console.log('Click AM 4'),
     },
 ]

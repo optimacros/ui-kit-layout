@@ -1,8 +1,8 @@
-﻿.SidebarSubList {
+﻿.ResourceSubList {
     display: flex;
     flex-direction: column;
-    
-    &.Expanded {
+
+    &.Opened {
         > .Content {
             height: 100%;
         }

@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import { FC } from 'react'
 import { Icon } from 'ui-kit-core'
 
-import { MemoryData } from '../types.ts'
+import { MemoryData } from './types.ts'
 
 import styles from './MemoryCounter.module.css'
 
