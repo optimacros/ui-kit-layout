@@ -1,7 +1,7 @@
 {
   "name": "ui-kit-layout",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": [
     "dist"
   ],
@@ -29,7 +29,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-svg": "16.1.32",
-    "ui-kit-core": "github:optimacros/ui-kit-core#1.0.7"
+    "ui-kit-core": "github:optimacros/ui-kit-core#1.1.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.23.7",
