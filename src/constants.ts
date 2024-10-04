@@ -5,6 +5,7 @@ export const foldersMock = [
         label: 'Folder 1',
         id: 123423,
         icon: 'Folder',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click Folder 1'),
     },
     {
@@ -13,6 +14,7 @@ export const foldersMock = [
         label: 'Folder 2',
         id: 42432,
         icon: 'Folder',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click Folder 2'),
 
     },
@@ -22,6 +24,7 @@ export const foldersMock = [
         label: 'Folder 3',
         id: 3432324,
         icon: 'Folder',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click Folder 3'),
 
     },
@@ -31,6 +34,7 @@ export const foldersMock = [
         label: 'Folder 4',
         id: 43232324,
         icon: 'Folder',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click Folder 4'),
     },
 ]
@@ -43,6 +47,7 @@ export const workspacesMock = [
         id: 1432423432,
         href: '#',
         icon: 'Workspace',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click Workspace 1'),
     },
     {
@@ -52,6 +57,7 @@ export const workspacesMock = [
         id: 24324323,
         href: '#',
         icon: 'Workspace',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click Workspace 2'),
     },
     {
@@ -62,7 +68,9 @@ export const workspacesMock = [
         href: '#',
         icon: 'Workspace',
         settingHref: '#',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click Workspace 3'),
+        // eslint-disable-next-line no-console
         settingOnClick: () => console.log('Setting Click'),
     },
     {
@@ -72,6 +80,7 @@ export const workspacesMock = [
         id: 375635352,
         href: '#',
         icon: 'Workspace',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click Workspace 4'),
     },
 ]
@@ -83,6 +92,7 @@ export const appManagersMock = [
         id: 1132335,
         href: '#',
         icon: 'AM',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click AM 1'),
     },
     {
@@ -92,6 +102,7 @@ export const appManagersMock = [
         id: 3122432325,
         href: '#',
         icon: 'AM',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click AM 2'),
     },
     {
@@ -101,6 +112,7 @@ export const appManagersMock = [
         id: 3533653,
         href: '#',
         icon: 'AM',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click AM 3'),
     },
     {
@@ -110,6 +122,7 @@ export const appManagersMock = [
         id: 41242432,
         href: '#',
         icon: 'AM',
+        // eslint-disable-next-line no-console
         onClick: () => console.log('Click AM 4'),
     },
 ]

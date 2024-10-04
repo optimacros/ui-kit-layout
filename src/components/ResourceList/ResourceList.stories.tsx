@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 import { ResourceList } from './ResourceList'
 import { appManagersMock, foldersMock, workspacesMock } from '../../constants.ts'
 import iconFolderOpen from '../../icons/icon-folder-open.svg'
-import { getSidebarData } from '../../utils'
+import { getSidebarData } from '../Sidebar'
 
 const meta: Meta<typeof ResourceList> = {
     component: ResourceList,

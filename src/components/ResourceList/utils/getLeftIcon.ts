@@ -12,9 +12,6 @@ export const getLeftIcon = (
     }
 
     if (!defaultIcon && getIcon) {
-        console.log('here')
-        console.log(getIcon(icon))
-
         return getIcon(icon)
     }
 
