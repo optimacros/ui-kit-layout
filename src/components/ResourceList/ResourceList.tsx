@@ -59,7 +59,7 @@ export const ResourceList: FC<ResourceListProps> = (props) => {
     }
 
     return (
-        <div className={classNames(styles.ResourceList, className)}>
+        <div className={classNames(styles.Container, className)}>
             {resourceList.map((item) => renderListItem(item))}
         </div>
     )

@@ -12,7 +12,7 @@ export const Sidebar: FC<SidebarProps> = (props) => {
     const { children, className } = props
 
     return (
-        <div className={classNames(styles.Sidebar, className)} >
+        <div className={classNames(styles.Container, className)} >
             {children}
         </div>
     )
