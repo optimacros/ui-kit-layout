@@ -11,7 +11,6 @@ import styles from './ResourceListItem.module.css'
 interface ResourceListItemContentProps {
     label: string;
     opened: boolean;
-    selected: boolean;
     icon: ResourceListType | string | undefined;
     getIcon: ((icon: ResourceListType | string) => string) | undefined;
     getOpenedIcon: ((icon: ResourceListType | string) => string) | undefined;
@@ -24,7 +23,6 @@ export const ResourceListItemContent: FC<ResourceListItemContentProps> = (props)
         getIcon,
         getOpenedIcon,
         opened,
-        selected,
         label,
         shouldShowRightIcon = false,
     } = props
@@ -43,7 +41,7 @@ export const ResourceListItemContent: FC<ResourceListItemContentProps> = (props)
         }
 
         setLeftIcon(getLeftIcon(icon, getIcon))
-    }, [icon, opened, selected, getIcon, getOpenedIcon])
+    }, [icon, opened, getIcon, getOpenedIcon])
 
     return (
         <>

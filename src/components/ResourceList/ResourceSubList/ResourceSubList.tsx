@@ -2,16 +2,16 @@ import classNames from 'classnames'
 import type { FC, PropsWithChildren } from 'react'
 
 import { ResourceListItem } from '../ResourceListItem'
-import { ResourceListElement, ResourceListType } from '../types.ts'
+import { ResourceListDynamicStatus, ResourceListElement, ResourceListType } from '../types.ts'
 
 import styles from './ResourceSubList.module.css'
 
 interface ResourceSubListProps {
     nestingLevel: number;
     listItem: ResourceListElement;
-    handleUpdateResourceList: (itemId: number | string) => void;
-    getIcon?: (icon: ResourceListType | string) => string;
-    getOpenedIcon?: (icon: ResourceListType | string) => string;
+    handleUpdateResourceList: (itemId: number | string, property: ResourceListDynamicStatus) => void;
+    getIcon: ((icon: ResourceListType | string) => string) | undefined;
+    getOpenedIcon: ((icon: ResourceListType | string) => string) | undefined;
 }
 
 export const ResourceSubList: FC<PropsWithChildren<ResourceSubListProps>> = (props) => {

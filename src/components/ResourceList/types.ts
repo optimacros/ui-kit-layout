@@ -4,6 +4,11 @@ export enum ResourceListType {
     Folder = 'Folder',
 }
 
+export enum ResourceListDynamicStatus {
+    selected = 'selected',
+    opened = 'opened'
+}
+
 export interface ResourceListElement {
     id: number | string;
     type: ResourceListType | string;

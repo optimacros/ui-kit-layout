@@ -3,7 +3,7 @@ import { FC, JSX, useState } from 'react'
 
 import { ResourceListItem } from './ResourceListItem'
 import { ResourceSubList } from './ResourceSubList'
-import { ResourceListElement, ResourceListType } from './types.ts'
+import { ResourceListDynamicStatus, ResourceListElement, ResourceListType } from './types.ts'
 import { updateResourceList } from './utils/updateResourceList.ts'
 
 import styles from './ResourceList.module.css'
@@ -19,9 +19,9 @@ export const ResourceList: FC<ResourceListProps> = (props) => {
     const { elements, className = '', getIcon, getOpenedIcon } = props
     const [resourceList, setResourceList] = useState(elements)
 
-    const handleUpdateResourceList = (itemId: number | string) : void => {
+    const handleUpdateResourceList = (itemId: number | string, property: ResourceListDynamicStatus) : void => {
         setResourceList(prev => {
-            return updateResourceList(prev, itemId)
+            return updateResourceList(prev, itemId, property)
         })
     }
 
