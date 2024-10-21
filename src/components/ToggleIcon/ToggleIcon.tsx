@@ -28,8 +28,8 @@ export const ToggleIcon: FC<ToggleIconProps> = (props) => {
         wrapperClassName,
         styles.ToggleButtonWrapper,
         {
-            [styles.ToggleButtonWrapper__Close]: isOpen,
-            [styles.ToggleButtonWrapper__Open]: !isOpen,
+            [styles.ToggleButtonWrapper__Close]: !isOpen,
+            [styles.ToggleButtonWrapper__Open]: isOpen,
         },
     )
 
