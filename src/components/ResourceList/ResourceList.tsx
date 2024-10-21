@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { FC, JSX, useState } from 'react'
+import { FC, JSX, useEffect, useState } from 'react'
 
 import { ResourceListItem } from './ResourceListItem'
 import { ResourceSubList } from './ResourceSubList'
@@ -18,6 +18,10 @@ interface ResourceListProps {
 export const ResourceList: FC<ResourceListProps> = (props) => {
     const { elements, className = '', getIcon, getOpenedIcon } = props
     const [resourceList, setResourceList] = useState(elements)
+
+    useEffect(() => {
+        setResourceList(elements)
+    }, [elements])
 
     const handleUpdateResourceList = (itemId: number | string, property: ResourceListDynamicStatus) : void => {
         setResourceList(prev => {
