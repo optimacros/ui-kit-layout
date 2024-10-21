@@ -1,7 +1,7 @@
 import { ResourceListType } from '../ResourceList'
 
 export interface SidebarElement {
-    rootId: number | null;
+    rootId: string | number | null;
     id: number | string;
     type: ResourceListType | string;
     label: string;
