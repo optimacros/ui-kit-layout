@@ -119,7 +119,7 @@ export const appManagersMock = [
         rootId: null,
         type: 'AM',
         label: 'AM 4',
-        id: 41242432,
+        id: 412424325,
         href: '#',
         icon: 'AM',
         // eslint-disable-next-line no-console
