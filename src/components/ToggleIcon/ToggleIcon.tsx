@@ -17,8 +17,8 @@ export interface ToggleIconProps {
 export const ToggleIcon: FC<ToggleIconProps> = (props) => {
     const { isOpen, handleClick, wrapperClassName, iconClassName } = props
     const iconValue = isOpen
-        ? iconDoubleArrowLeft
-        : iconDoubleArrowRight
+        ? iconDoubleArrowRight
+        : iconDoubleArrowLeft
 
     const title = isOpen
         ? 'Hide panel'
@@ -27,10 +27,6 @@ export const ToggleIcon: FC<ToggleIconProps> = (props) => {
     const className = classNames(
         wrapperClassName,
         styles.ToggleButtonWrapper,
-        {
-            [styles.ToggleButtonWrapper__Close]: !isOpen,
-            [styles.ToggleButtonWrapper__Open]: isOpen,
-        },
     )
 
     const iconClassNameFinal = classNames(styles.ToggleButtonIcon, iconClassName)
