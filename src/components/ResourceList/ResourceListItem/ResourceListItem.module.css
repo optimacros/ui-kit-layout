@@ -27,6 +27,7 @@
     padding: 12px 20px;
     height: 18px;
     width: 18px;
+    box-sizing: content-box;
 
     &:hover {
         background: hsla(0, 0%, 100%, 0.1);
