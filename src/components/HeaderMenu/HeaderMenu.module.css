@@ -114,11 +114,6 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
     & .Element_IconContainer {
         margin-right: 5px;
 
-        div {
-            display: flex;
-            align-items: center;
-        }
-
         svg {
             path {
                 stroke: currentColor;
@@ -156,6 +151,9 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
 
     & .Element_IconContainer {
         margin-right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     & .Element_Icon {
@@ -163,8 +161,8 @@ https://optimacros.myjetbrains.com/youtrack/issue/OM-1575
         color: var(--headerMenu-subMenu-color);
 
         & > div > svg {
-            width: 15px;
-            height: 15px;
+            width: 14px;
+            height: 14px;
 
             & > g > path {
                 stroke: var(--headerMenu-subMenu-color);

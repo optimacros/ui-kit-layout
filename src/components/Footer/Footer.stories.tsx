@@ -20,6 +20,7 @@ type Story = StoryObj<typeof Footer>
 export const Basic: Story = {
     args: {
         appVersion: '1.0.0',
-        children: `©Copyright Optimacros 2018 - ${new Date().getFullYear()}`,
+        copyright: `©Copyright Optimacros 2018 - ${new Date().getFullYear()}`,
+        children: 'children content',
     },
 }

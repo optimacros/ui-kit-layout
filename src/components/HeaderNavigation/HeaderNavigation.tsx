@@ -5,7 +5,7 @@ import styles from './HeaderNavigation.module.css'
 
 export interface HeaderNavigationProps {
     title: string;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export const HeaderNavigation: FC<HeaderNavigationProps> = (props) => {

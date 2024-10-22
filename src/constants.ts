@@ -1,224 +1,128 @@
-import { SidebarListItem } from 'components/SidebarList/type'
-import iconApp from 'icons/icon-app.svg'
-import iconFolderClose from 'icons/icon-folder-close.svg'
-import iconUser from 'icons/icon-user.svg'
-import iconWorkspace from 'icons/icon-workspace.svg'
+export const foldersMock = [
+    {
+        rootId: null,
+        type: 'Folder',
+        label: 'Folder 1',
+        id: 123423,
+        icon: 'Folder',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click Folder 1'),
+    },
+    {
+        rootId: null,
+        type: 'Folder',
+        label: 'Folder 2',
+        id: 42432,
+        icon: 'Folder',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click Folder 2'),
 
-export const KEY_CODES = {
-    SPACE: 32,
-    ESC: 27,
-    ENTER: 13,
-    ARROW_LEFT: 37,
-    ARROW_UP: 38,
-    ARROW_RIGHT: 39,
-    ARROW_DOWN: 40,
-}
+    },
+    {
+        rootId: 123423,
+        type: 'Folder',
+        label: 'Folder 3',
+        id: 3432324,
+        icon: 'Folder',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click Folder 3'),
 
-export const elements = [
+    },
     {
-        id: '1',
-        icon: 'list',
-        title: 'AM Landing (Applications)',
-        disabled: false,
+        rootId: null,
+        type: 'Folder',
+        label: 'Folder 4',
+        id: 43232324,
+        icon: 'Folder',
         // eslint-disable-next-line no-console
-        open: () => console.log('click'),
-    },
-    {
-        id: '2',
-        title: 'Tasks manager',
-        disabled: false,
-        // eslint-disable-next-line no-console
-        open: () => console.log('click'),
-    },
-    {
-        id: '3',
-        title: 'Task output',
-        disabled: false,
-        // eslint-disable-next-line no-console
-        open: () => console.log('click'),
-    },
-    {
-        id: '4',
-        title: 'General parameters',
-        disabled: false,
-        // eslint-disable-next-line no-console
-        open: () => console.log('click'),
-    },
-    {
-        id: '5',
-        title: 'Security Center',
-        disabled: true,
-    },
-    {
-        id: '6',
-        title: 'Help',
-        disabled: false,
-        children: [
-            {
-                id: '7',
-                icon: 'help_outline',
-                title: 'App Version',
-                disabled: false,
-                // eslint-disable-next-line no-console
-                open: () => console.log('click'),
-            },
-        ],
+        onClick: () => console.log('Click Folder 4'),
     },
 ]
 
-export const userElements = [
+export const workspacesMock = [
     {
-        id: '10',
-        title: 'User Name',
-        icon: iconUser,
-        disabled: false,
-        children: [
-            {
-                id: '11',
-                icon: iconUser,
-                title: 'Profile',
-                disabled: false,
-                // eslint-disable-next-line no-console
-                open: () => console.log('click'),
-            },
-            {
-                id: '12',
-                icon: 'help_outline',
-                title: 'App version',
-                disabled: false,
-                // eslint-disable-next-line no-console
-                open: () => console.log('click'),
-            },
-            {
-                id: '13',
-                icon: 'settings',
-                title: 'Settings',
-                disabled: false,
-                // eslint-disable-next-line no-console
-                open: () => console.log('click'),
-            },
-            {
-                id: '14',
-                icon: 'input',
-                title: 'Log Out',
-                disabled: false,
-                // eslint-disable-next-line no-console
-                open: () => console.log('click'),
-            },
-        ],
+        rootId: 123423,
+        type: 'Workspace',
+        label: 'Workspace 1',
+        id: 1432423432,
+        href: '#',
+        icon: 'Workspace',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click Workspace 1'),
+    },
+    {
+        rootId: 42432,
+        type: 'Workspace',
+        label: 'Workspace 2',
+        id: 24324323,
+        href: '#',
+        icon: 'Workspace',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click Workspace 2'),
+    },
+    {
+        rootId: null,
+        type: 'Workspace',
+        label: 'Workspace 3',
+        id: 3434234242423,
+        href: '#',
+        icon: 'Workspace',
+        settingHref: '#',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click Workspace 3'),
+        // eslint-disable-next-line no-console
+        settingOnClick: () => console.log('Setting Click'),
+    },
+    {
+        rootId: 42432,
+        type: 'Workspace',
+        label: 'Workspace 4',
+        id: 375635352,
+        href: '#',
+        icon: 'Workspace',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click Workspace 4'),
     },
 ]
-
-export const notification = {
-    unreadCount: 3,
-    active: false,
-    visible: true,
-    // eslint-disable-next-line no-console
-    toggle: () => console.log('toggle'),
-}
-
-// Sidebar mock
-
-export const foldersMock: SidebarListItem[] = [
+export const appManagersMock = [
     {
-        folderId: null,
-        type: 'folder',
-        name: 'Folder 1',
-        id: 1,
-        icon: iconFolderClose,
-    },
-    {
-        folderId: null,
-        type: 'folder',
-        name: 'Folder 2',
-        id: 2,
-        icon: iconFolderClose,
-
-    },
-    {
-        folderId: 1,
-        type: 'folder',
-        name: 'Folder 3',
-        id: 3,
-        icon: iconFolderClose,
-
-    },
-    {
-        folderId: null,
-        type: 'folder',
-        name: 'Folder 4',
-        id: 4,
-        icon: iconFolderClose,
-
-    },
-]
-
-export const workspacesMock: SidebarListItem[] = [
-    {
-        folderId: 1,
-        type: 'workspace',
-        name: 'Workspace 1',
-        id: 1,
+        rootId: 123423,
+        type: 'AM',
+        label: 'AM 1',
+        id: 1132335,
         href: '#',
-        icon: iconWorkspace,
+        icon: 'AM',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click AM 1'),
     },
     {
-        folderId: 2,
-        type: 'workspace',
-        name: 'Workspace 2',
-        id: 2,
+        rootId: 42432,
+        type: 'AM',
+        label: 'AM 2',
+        id: 3122432325,
         href: '#',
-        icon: iconWorkspace,
+        icon: 'AM',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click AM 2'),
     },
     {
-        folderId: null,
-        type: 'workspace',
-        name: 'Workspace 3',
-        id: 3,
+        rootId: 3432324,
+        type: 'AM',
+        label: 'AM 3',
+        id: 3533653,
         href: '#',
-        icon: iconWorkspace,
-        adminUrl: '123/213',
+        icon: 'AM',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click AM 3'),
     },
     {
-        folderId: 3,
-        type: 'workspace',
-        name: 'Workspace 4',
-        id: 4,
+        rootId: null,
+        type: 'AM',
+        label: 'AM 4',
+        id: 412424325,
         href: '#',
-        icon: iconWorkspace,
-    },
-]
-export const appManagersMock: SidebarListItem[] = [
-    {
-        folderId: 1,
-        type: 'appManager',
-        name: 'AM 1',
-        id: 1,
-        href: '#',
-        icon: iconApp,
-    },
-    {
-        folderId: 2,
-        type: 'appManager',
-        name: 'AM 2',
-        id: 3,
-        href: '#',
-        icon: iconApp,
-    },
-    {
-        folderId: 3,
-        type: 'appManager',
-        name: 'AM 3',
-        id: 3,
-        href: '#',
-        icon: iconApp,
-    },
-    {
-        folderId: null,
-        type: 'appManager',
-        name: 'AM 4',
-        id: 4,
-        href: '#',
-        icon: iconApp,
+        icon: 'AM',
+        // eslint-disable-next-line no-console
+        onClick: () => console.log('Click AM 4'),
     },
 ]

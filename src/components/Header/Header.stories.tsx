@@ -23,6 +23,7 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
 export const Basic: Story = {
     args: {
         children: 'Header',
+        className: '',
     },
     decorators: [
         (story) => <Wrapper>{story()}</Wrapper>,

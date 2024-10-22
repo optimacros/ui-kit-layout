@@ -2,18 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react'
 import type { ReactNode } from 'react'
 
 import { HeaderUserMenu } from './HeaderUserMenu'
-import * as HeaderNotificationStories from '../HeaderNotification/HeaderNotification.stories'
 import iconUser from 'icons/icon-user.svg'
 
 const meta: Meta<typeof HeaderUserMenu> = {
     component: HeaderUserMenu,
     title: 'UI Kit layout/HeaderUserMenu',
-    argTypes: {
-        notification: {
-            description: 'Notification info',
-            control: 'object',
-        },
-    },
 }
 
 export default meta
@@ -22,7 +15,14 @@ type Story = StoryObj<typeof HeaderUserMenu>
 
 const Wrapper = ({ children }: {children: ReactNode}) => {
     return (
-        <div style={{ backgroundColor: 'var(--primary-color)', color: '#fff' }}>
+        <div
+            style={{
+                backgroundColor: 'var(--primary-color)',
+                color: '#fff',
+                display: 'flex',
+                justifyContent: 'flex-end',
+            }}
+        >
             {children}
         </div>
     )
@@ -74,7 +74,6 @@ const userElements = [
 export const Basic:Story = {
     args: {
         elements: userElements,
-        notification: HeaderNotificationStories.Basic.args?.notification,
     },
     decorators: [
         (story) => <Wrapper>{story()}</Wrapper>,

@@ -1,25 +1,19 @@
-import type { FC } from 'react'
-
-import { SidebarList } from 'components/SidebarList'
-import type { SidebarListItem } from 'components/SidebarList/type'
-import { getSidebarData } from 'utils/Sidebar/getSidebarData'
+import classNames from 'classnames'
+import type { FC, ReactNode } from 'react'
 
 import styles from './Sidebar.module.css'
 
 export interface SidebarProps {
-    folders: SidebarListItem[];
-    content: SidebarListItem[][];
+    children: ReactNode;
+    className?: string;
 }
 
 export const Sidebar: FC<SidebarProps> = (props) => {
-    const { folders, content } = props
-    const sidebarData = getSidebarData(folders, ...content)
+    const { children, className } = props
 
     return (
-        <div className={styles.Sidebar} >
-            <SidebarList
-                listData={sidebarData}
-            />
+        <div className={classNames(styles.Container, className)} >
+            {children}
         </div>
     )
 }
